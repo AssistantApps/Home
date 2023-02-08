@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    {{> components/documentHead preloadMainImgs="true"}}
+
+    {{!-- JSON-LD --}}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "SoftwareApplication",
+            "name": "{{meta.appName}}",
+            "url": "{{rootUrl}}",
+            "about": "{{meta.description}}",
+            "description": "{{meta.description}}",
+            "image": "{{images.favicon.x192}}",
+            "applicationCategory": "Application",
+            "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
+            "softwareVersion": "{{version}}",
+            "version": "{{version}}",
+            "author": {
+                "@type": "Person",
+                "name": "{{kurt.name}}",
+                "givenName": "{{kurt.name}}",
+                "familyName": "{{kurt.name}}",
+                "additionalName": "{{kurt.additionalName}}",
+                "url": "{{kurt.website}}",
+                "image": "{{kurt.image}}",
+                "description": "{{meta.description}}",
+                "jobTitle": "Software Engineer"
+            },
+            "creator": {
+                "@type": "Person",
+                "name": "{{kurt.name}}",
+                "givenName": "{{kurt.name}}",
+                "familyName": "{{kurt.name}}",
+                "additionalName": "{{kurt.additionalName}}",
+                "url": "{{kurt.website}}",
+                "image": "{{kurt.image}}",
+                "description": "{{meta.description}}",
+                "jobTitle": "Software Engineer"
+            },
+            "offers": {
+                "@type": "offer",
+                "price": "0",
+                "priceCurrency": "USD",
+                "name": "{{meta.appName}}",
+                "url": "{{rootUrl}}",
+                "image": "{{images.favicon.x192}}",
+                "description": "{{meta.description}}",
+                "itemOffered": {
+                    "@type": "service",
+                    "name": "{{meta.appName}}",
+                    "brand": {
+                        "@type": "brand",
+                        "name": "{{meta.appName}}",
+                        "url": "{{rootUrl}}",
+                        "logo": "{{images.favicon.x192}}",
+                        "image": "{{images.favicon.x192}}",
+                        "description": "{{meta.description}}"
+                    },
+                    "url": "{{rootUrl}}",
+                    "logo": "{{images.favicon.x192}}",
+                    "image": "{{images.favicon.x192}}",
+                    "description": "{{meta.description}}",
+                    "offers": [
+                        {{#each assistantApps as |app index|}}
+                            {{#if @index}},{{/if}}
+                            {
+                                "@type": "offer",
+                                "price": "0",
+                                "priceCurrency": "USD",
+                                "name": "{{app.title}}",
+                                "url": "{{app.link}}",
+                                "image": "{{app.image}}",
+                                "description": "{{app.description}}"
+                            }
+                        {{/each}}
+                    ]
+                }
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "bestRating": "5",
+                "ratingCount": "1",
+                "reviewCount": "5",
+                "ratingValue": "5"
+            },
+            "inLanguage": "en",
+            "dateCreated": "{{date}}",
+            "dateModified": "{{date}}",
+            "datePublished": "{{date}}"
+        }
+    </script>
+</head>
+
+<body class="is-preload">
+    <div id="page-wrapper" class="bootstrap-wrapper">
+        <header id="header" class="noselect alt">
+            <label id="menu-toggle" for="toggle">Menu</label>
+            <input type="checkbox" id="toggle">
+            <label id="menu" class="noselect" for="toggle">
+                <div class="menu-inner">
+                    <ul class="links">
+                        <li>
+                            <a href="{{urlref link.tools}}" title="Translation Tool" target="_blank"
+                                rel="noopener noreferrer">Translation Tool</a>
+                        </li>
+                        <li>
+                            <a href="{{urlref kurt.website}}" title="{{kurt.name}}" target="_blank"
+                                rel="noopener noreferrer">{{kurt.name}}</a>
+                        </li>
+                        {{#each assistantApps}}
+                        {{#unless @last}}
+                        <li>
+                            <a href="{{urlref link}}" title="{{title}}" target="_blank"
+                                rel="noopener noreferrer">{{title}}</a>
+                        </li>
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+                    <label id="menu-toggle-close" for="toggle">X</label>
+                </div>
+            </label>
+        </header>
+
+        {{> components/banner }}
+
+        <section id="wrapper">
+            <h2 class="mb-1">Our Assistants</h2>
+
+            <div class="features">
+                {{#each assistantApps}}
+                {{> components/appSection }}
+                {{/each}}
+            </div>
+        </section>
+
+        <section id="wrapper-work" class="wrapper primary-colour">
+            <div class="inner">
+                <h2>{{additional}}</h2>
+                <p class="mb-2">{{additionalDescription}}</p>
+
+                <div class="features">
+                    {{#each features}}
+                    {{> components/appFeature }}
+                    {{/each}}
+                </div>
+            </div>
+        </section>
+
+        <section id="footer">
+            <div class="inner noselect">
+                <h2>{{footer}}</h2>
+                <p class="mb-2">{{footerDescription}}</p>
+                <form id="contact_form">
+                    <div class="fields row">
+                        <div class="field col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            <input type="text" name="name" placeholder="Enter your name" id="name" />
+                        </div>
+                        <div class="field col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            <input type="email" name="email" placeholder="Enter your email" id="email" />
+                        </div>
+                        <div class="field col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <textarea name="message" id="message" placeholder="Enter your message" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <div class="h-captcha" data-theme="dark" data-sitekey="916895db-249a-4ae3-bf39-9fe42e72d196"></div>
+                    <ul class="actions">
+                        <li><input id="submit" type="submit" value="Submit" /></li>
+                    </ul>
+                </form>
+                <div id="success_message">
+                    <h2>Successfully submitted contact form!</h2>
+                </div>
+                <div id="error_message">
+                    <h2>Sorry!! Something went wrong, please try sending an email instead.</h2>
+                </div>
+            </div>
+        </section>
+
+        <hr />
+
+        {{> components/footer }}
+
+    </div>
+
+    {{> components/scripts parallax="true" hcaptcha="true" }}
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+@use "sass:math"
+
+$appStartTitles: {{#each assistantApps}}{{#unless hiddenOnFrontPage}}{{#unless
+@last}}"{{{titleStart}}}",{{/unless}}{{/unless}}{{/each}}
+$appEndTitles: {{#each assistantApps}}{{#unless hiddenOnFrontPage}}{{#unless
+@last}}"{{{titleEnd}}}",{{/unless}}{{/unless}}{{/each}}
+$appLeftScreenshots: {{#each assistantApps}}{{#unless hiddenOnFrontPage}}{{#unless
+@last}}"{{{screenshotLeft}}}",{{/unless}}{{/unless}}{{/each}}
+$appRightScreenshots: {{#each assistantApps}}{{#unless hiddenOnFrontPage}}{{#unless
+@last}}"{{{screenshotRight}}}",{{/unless}}{{/unless}}{{/each}}
+$appImages: {{#each assistantApps}}{{#unless hiddenOnFrontPage}}{{#unless
+@last}}"{{{icon}}}",{{/unless}}{{/unless}}{{/each}}
+
+$defaultAppImage: "{{assistantApps.0.icon}}"
+
+$appAnimationPerc: (math.div(100, length($appStartTitles)))
+$appAnimationGapPerc: 5
+$appAnimationSecPerApp: 3
+$appAnimationDuration: ($appAnimationSecPerApp * length($appStartTitles))

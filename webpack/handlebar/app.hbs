@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    {{> components/documentHead }}
+
+
+    {{#if customPrimaryColour}}
+
+    {{{cssvar
+    "--primary-text-colour" customPrimaryColour
+    "--primary-text-colour2" customPrimaryColour
+    "--bubble-bg" backgroundImg
+    }}}
+
+    {{/if}}
+
+    {{!-- JSON-LD --}}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "SoftwareApplication",
+            "name": "{{assApp.appName}}",
+            "url": "{{assApp.link}}",
+            "about": "{{assApp.description}}",
+            "description": "{{assApp.description}}",
+            "image": "{{assApp.image}}",
+            "applicationCategory": "Application",
+            "author": {
+                "@type": "Person",
+                "name": "{{kurt.name}}",
+                "givenName": "{{kurt.name}}",
+                "familyName": "{{kurt.name}}",
+                "additionalName": "{{kurt.additionalName}}",
+                "url": "{{kurt.website}}",
+                "image": "{{kurt.image}}",
+                "description": "{{meta.description}}",
+                "jobTitle": "Software Engineer"
+            },
+            "creator": {
+                "@type": "Person",
+                "name": "{{kurt.name}}",
+                "givenName": "{{kurt.name}}",
+                "familyName": "{{kurt.name}}",
+                "additionalName": "{{kurt.additionalName}}",
+                "url": "{{kurt.website}}",
+                "image": "{{kurt.image}}",
+                "description": "{{meta.description}}",
+                "jobTitle": "Software Engineer"
+            },
+            "offers": {
+                "@type": "offer",
+                "price": "0",
+                "priceCurrency": "USD",
+                "name": "{{assApp.appName}}",
+                "url": "{{assApp.link}}",
+                "image": "{{assApp.image}}",
+                "description": "{{assApp.description}}",
+            },
+            "inLanguage": "en",
+            "dateCreated": "{{date}}",
+            "dateModified": "{{date}}",
+            "datePublished": "{{date}}"
+        }
+    </script>
+</head>
+
+<body class="is-preload app-specific">
+    <div id="page-wrapper" class="bootstrap-wrapper">
+        <header id="header" class="app-specific noselect">
+            <a href="/" class="header-logo">
+                <img src="{{icon}}" alt="Logo" />
+            </a>
+            <div class="header-center">
+                <a href="/" title="{{meta.title}}">Home</a>
+                <a href="{{urlref rootLinks.documentation}}" title="Documentation" target="_blank"
+                    rel="noopener noreferrer">Documentation</a>
+                <a href="{{urlref rootLinks.discord}}" title="Discord" target="_blank"
+                    rel="noopener noreferrer">Discord</a>
+            </div>
+            <div class="header-download">
+                <a href="{{urlref downloadAppLink}}" title="Download" target="_blank"
+                    rel="noopener noreferrer">Download</a>
+            </div>
+        </header>
+
+        <hr />
+
+        {{#> components/banner isAppSpecific="true" }}
+        <div class="store">
+            <div class="store-list">
+                {{#each storeBadges}}
+                <a href="{{url}}" title="{{title}}" class="badge">
+                    <img src="/assets/img/store/{{icon}}-large.png" loading="lazy" draggable="false"
+                        alt="{{title}} large" />
+                </a>
+                {{/each}}
+            </div>
+
+            <div class="sublinks noselect">
+                {{#each otherLinks}}
+                <a href="{{urlref url}}" title="{{title}}" target="_blank" rel="noopener noreferrer" class="store-icon">
+                    <img src="/assets/img/store/{{icon}}.png" alt="{{title}}" />
+                    <div class="content">
+                        <p>{{title}}</p>
+                    </div>
+                </a>
+                {{/each}}
+            </div>
+        </div>
+        {{/components/banner}}
+
+        <hr />
+
+        {{> components/footer }}
+    </div>
+
+    {{> components/scripts parallax="true" }}
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+RewriteEngine On
+
+{{#each headers}}
+Header add {{name}}: "{{{value}}}"
+{{/each}}
+
+
+{{#each redirects}}
+RewriteRule ^{{pattern}}/(.*)$ {{{urlrefescaped url}}} [R=301,NC,L]
+{{/each}}

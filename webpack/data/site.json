@@ -1,0 +1,374 @@
+{
+    "rootUrl": "https://assistantapps.com",
+    "kurt": {
+        "name": "Kurt Lourens",
+        "email": "mailto:hi@kurtlourens.com",
+        "website": "https://kurtlourens.com",
+        "image": "https://kurtlourens.com/assets/images/KurtAvatar.svg",
+        "additionalName": "KhaozTopsy",
+        "twitter": "@KhaozTopsy"
+    },
+    "link": {
+        "tools": "https://tools.assistantapps.com",
+        "discord": "https://assistantapps.com/discord",
+        "documentation": "https://docs.assistantapps.com"
+    },
+    "theme": {
+        "colour": "#4285f4",
+        "maskColour": "#2b5797"
+    },
+    "meta": {
+        "appName": "Assistant Apps",
+        "title": "Assistant Apps by Kurt Lourens",
+        "description": "Home page of the Assistant Apps. Get the apps on Google Play, Apple App Store and on the web"
+    },
+    "subtitle": "Beautiful and fast cross-platform apps built to help you in your favourite games!",
+    "additional": "Assistant work",
+    "additionalDescription": "Working on these projects has opened up opportunities to talk to other community developers, host streams and start organisations all aimed at entertaining and assisting gamers enjoy their games to the fullest!!",
+    "footer": "Get in touch",
+    "footerDescription": "Feel free to get in contact with us! we have a Discord server if you would like to talk directly to us. Otherwise you can use the form below and we will get back to you as soon as we can.",
+    "twitter": {
+        "handle": "@AssistantApps",
+        "url": "https://twitter.com/AssistantApps",
+        "imageAlt": "Logo of the Assistant Apps",
+        "metaImageSize": "summary_large_image"
+    },
+    "preconnect": [
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com",
+        "https://cdn.assistantapps.com"
+    ],
+    "images": {
+        "maskIcon": "/safari-pinned-tab.svg",
+        "favicon": {
+            "ico": "assets/favicon/favicon.ico",
+            "x16": "assets/favicon/favicon-16x16.png",
+            "x32": "assets/favicon/favicon-32x32.png",
+            "x96": "assets/favicon/favicon-96x96.png",
+            "x192": "assets/favicon/android-icon-192x192.png"
+        },
+        "apple": {
+            "x57": "assets/favicon/apple-icon-57x57.png",
+            "x60": "assets/favicon/apple-icon-60x60.png",
+            "x72": "assets/favicon/apple-icon-72x72.png",
+            "x76": "assets/favicon/apple-icon-76x76.png",
+            "x114": "assets/favicon/apple-icon-114x114.png",
+            "x120": "assets/favicon/apple-icon-120x120.png",
+            "x144": "assets/favicon/apple-icon-144x144.png",
+            "x152": "assets/favicon/apple-icon-152x152.png",
+            "x180": "assets/favicon/apple-icon-180x180.png"
+        },
+        "twitter": "https://mugshotbot.com/m/zkrIydZc",
+        "facebook": "https://mugshotbot.com/m/zkrIydZc"
+    },
+    "assistantApps": [
+        {
+            "shortCode": "nms",
+            "game": "No Man's Sky",
+            "title": "Assistant for No Man's Sky",
+            "titleStart": "Assistant for",
+            "titleEnd": "No Man's Sky",
+            "link": "https://nmsassistant.com",
+            "image": "https://cdn.assistantapps.com/assistantNMS.webp",
+            "icon": "https://cdn.assistantapps.com/icon/assistantNMS.webp",
+            "screenshotLeft": "/assets/img/screenshot-assistantNMS1.png",
+            "screenshotRight": "/assets/img/screenshot-assistantNMS2.png",
+            "description": "The first of the Assistant apps! This app was relased on the 12th of August 2019 and reached 40 000 active users on Android 1 year later. The app is available on Android, iOS and a simplified version is available for Web",
+            "documentation": "https://docs.assistantapps.com/#/apps/nms-main",
+            "downloadAppLink": "https://play.google.com/store/apps/details?id=com.kurtlourens.no_mans_sky_recipes",
+            "customPrimaryColour": "#7986cb",
+            "twitter": {
+                "handle": "@AssistantNMS",
+                "url": "https://twitter.com/AssistantNMS",
+                "imageAlt": "Logo of the AssistantNMS"
+            },
+            "links": [
+                {
+                    "title": "Apple App Store",
+                    "icon": "apple",
+                    "url": "https://apps.apple.com/us/app/id1480287625"
+                },
+                {
+                    "title": "Google Play Store",
+                    "icon": "googlePlay",
+                    "url": "https://play.google.com/store/apps/details?id=com.kurtlourens.no_mans_sky_recipes"
+                },
+                {
+                    "title": "Web App",
+                    "icon": "webapp",
+                    "url": "https://app.nmsassistant.com"
+                },
+                {
+                    "title": "Windows",
+                    "icon": "windows",
+                    "url": "https://apps.microsoft.com/store/detail/assistant-for-no-mans-sky/9NQLF7XD0LF3"
+                },
+                {
+                    "title": "Homepage",
+                    "icon": "web",
+                    "url": "https://nmsassistant.com"
+                },
+                {
+                    "title": "Github organisation",
+                    "icon": "github",
+                    "url": "https://github.com/AssistantNMS"
+                }
+            ]
+        },
+        {
+            "shortCode": "sms",
+            "game": "Scrap Mechanic",
+            "title": "Assistant for Scrap Mechanic",
+            "titleStart": "Assistant for",
+            "titleEnd": "Scrap Mechanic",
+            "link": "https://scrapassistant.com",
+            "image": "https://cdn.assistantapps.com/assistantSMS.webp",
+            "icon": "https://cdn.assistantapps.com/icon/assistantSMS.webp",
+            "screenshotLeft": "/assets/img/screenshot-assistantSMS1.png",
+            "screenshotRight": "/assets/img/screenshot-assistantSMS2.png",
+            "description": "The Assistant for Scrap Mechanic app would not have been started if the developers of the game did not make it easy for modders to look at and edit the game's files. This made reading the game files a lot easier than No Man's Sky and helped in completing this project in a short period of time (2-3 weeks part time). This is also the first completely open source project.",
+            "documentation": "https://docs.assistantapps.com/#/apps/sms-main",
+            "customPrimaryColour": "#F2931F",
+            "links": [
+                {
+                    "title": "Apple App Store",
+                    "icon": "apple",
+                    "url": "https://apps.apple.com/us/app/id1519215611"
+                },
+                {
+                    "title": "Google Play Store",
+                    "icon": "googlePlay",
+                    "url": "https://play.google.com/store/apps/details?id=com.kurtlourens.scrap_mechanic"
+                },
+                {
+                    "title": "Web",
+                    "icon": "webapp",
+                    "url": "https://scrapassistant.com"
+                },
+                {
+                    "title": "Github organisation",
+                    "icon": "github",
+                    "url": "https://github.com/AssistantSMS"
+                }
+            ]
+        },
+        {
+            "shortCode": "kronos",
+            "game": "Guides for Zombies",
+            "title": "Kronos: Guides for Zombies",
+            "titleStart": "Kronos:",
+            "titleEnd": "Guides for Zombies",
+            "link": "https://kronosguides.app",
+            "image": "https://cdn.assistantapps.com/kronos.jpg",
+            "icon": "https://cdn.assistantapps.com/icon/kronos.jpg",
+            "screenshotLeft": "/assets/img/screenshot-assistantNMS1.png",
+            "screenshotRight": "/assets/img/screenshot-assistantNMS2.png",
+            "description": "Do you play Zombies? Tired of having to search for guides when playing? Let this app do the work for you! Join the community of over 50,000 to stay up-to-date with the latest Zombies Easter Eggs with Kronos - the zombies companion!",
+            "documentation": "https://docs.assistantapps.com/#/apps/kgz-main",
+            "links": [
+                {
+                    "title": "Apple App Store",
+                    "icon": "apple",
+                    "url": "https://apps.apple.com/us/app/id1438078478"
+                },
+                {
+                    "title": "Google Play Store",
+                    "icon": "googlePlay",
+                    "url": "https://play.google.com/store/apps/details?id=companion.kronosflutter"
+                }
+            ]
+        },
+        {
+            "shortCode": "forest",
+            "game": "The Forest",
+            "title": "Companion of the Forest",
+            "titleStart": "Assistant for",
+            "titleEnd": "The Forest",
+            "link": "https://theforestmap.app",
+            "image": "https://cdn.assistantapps.com/forest.png",
+            "icon": "https://cdn.assistantapps.com/icon/forest.jpg",
+            "screenshotLeft": "/assets/img/screenshot-assistantFOR1.png",
+            "screenshotRight": "/assets/img/screenshot-assistantFOR2.png",
+            "description": "Do you play The Forest? Tired of searching for item locations while playing? Companion of the Forest is an interactive Forest Map that shows you where items in the game are. Whether you're a new or returning player, this app's got you covered with locations of items from the original Forest and it's sequel, Sons of the Forest!",
+            "documentation": "https://docs.assistantapps.com/#/apps/kgz-main",
+            "customPrimaryColour": "#CAB735",
+            "links": [
+                {
+                    "title": "Apple App Store",
+                    "icon": "apple",
+                    "url": "https://apps.apple.com/us/app/companion-of-the-forest/id1576018666"
+                },
+                {
+                    "title": "Google Play Store",
+                    "icon": "googlePlay",
+                    "url": "https://play.google.com/store/apps/details?id=companion.sotf"
+                },
+                {
+                    "title": "Web",
+                    "icon": "webapp",
+                    "url": "https://app.theforestmap.app/"
+                },
+                {
+                    "title": "Homepage",
+                    "icon": "web",
+                    "url": "https://theforestmap.app"
+                }
+            ]
+        },
+        {
+            "shortCode": "dkm",
+            "hiddenOnFrontPage": true,
+            "game": "Dinkum",
+            "title": "Assistant for Dinkum",
+            "titleStart": "Assistant for",
+            "titleEnd": "Dinkum",
+            "link": "https://dinkum.assistantapps.com",
+            "image": "https://cdn.assistantapps.com/assistantSMS.webp",
+            "icon": "https://cdn.assistantapps.com/icon/assistantSMS.webp",
+            "screenshotLeft": "/assets/img/screenshot-assistantSMS1.png",
+            "screenshotRight": "/assets/img/screenshot-assistantSMS2.png",
+            "description": "The Assistant for Scrap Mechanic app would not have been started if the developers of the game did not make it easy for modders to look at and edit the game's files. This made reading the game files a lot easier than No Man's Sky and helped in completing this project in a short period of time (2-3 weeks part time). This is also the first completely open source project.",
+            "documentation": "https://docs.assistantapps.com/#/apps/dkm-main",
+            "customPrimaryColour": "#8B432B",
+            "links": [
+                {
+                    "title": "Web",
+                    "icon": "webapp",
+                    "url": "https://dinkum.assistantapps.com"
+                },
+                {
+                    "title": "Github organisation",
+                    "icon": "github",
+                    "url": "https://github.com/AssistantDKM"
+                }
+            ]
+        },
+        {
+            "game": "Coming Soon",
+            "title": "Assistant for Unknown",
+            "titleStart": "Coming Soon",
+            "titleEnd": "",
+            "link": "#",
+            "image": "/assets/img/Unknown.webp",
+            "icon": "/assets/img/Unknown.webp",
+            "description": "Yet another Assistant app is under development. Can you guess what game it will be about? Let us know what you think we are working on 😁",
+            "links": []
+        }
+    ],
+    "links": [
+        {
+            "title": "Email",
+            "url": "mailto:support@assistantapps.com",
+            "class": "icon-envelope",
+            "alt": "support email"
+        },
+        {
+            "title": "Discord",
+            "url": "https://assistantapps.com/discord",
+            "class": "icon-discord",
+            "alt": "Discord"
+        },
+        {
+            "title": "Twitter",
+            "url": "https://twitter.com/KhaozTopsy",
+            "class": "icon-twitter",
+            "alt": "Twitter"
+        },
+        {
+            "title": "AssistantApps Github",
+            "url": "https://assistantapps.com/github",
+            "class": "icon-github",
+            "alt": "Github"
+        }
+    ],
+    "features": [
+        {
+            "title": "NMSCD",
+            "image": "./assets/img/NMSCD.png",
+            "link": "https://github.com/NMSCD",
+            "description": "We founded the The No Man's Sky Community Developers and Designers. The NMSCD is a Github organisation for people making tools for the NMS players.",
+            "subLinks": [
+                {
+                    "title": "Homepage",
+                    "url": "https://nmscd.com"
+                },
+                {
+                    "title": "Github",
+                    "url": "https://github.com/NMSCD"
+                }
+            ]
+        },
+        {
+            "title": "DevTalk",
+            "image": "./assets/img/devtalk.png",
+            "link": "https://www.youtube.com/playlist?list=PLIjFqYF1O-TDACR0Kz8h0OXfolRHCiUE5",
+            "description": "DevTalk is a weekly stream where we talked about what was happening in the No Man's Sky universe, coding, tech and developer stories.",
+            "subLinks": [
+                {
+                    "title": "DevTalk Playlist",
+                    "url": "https://www.youtube.com/playlist?list=PLIjFqYF1O-TDACR0Kz8h0OXfolRHCiUE5"
+                },
+                {
+                    "title": "Youtube Channel",
+                    "url": "https://www.youtube.com/channel/UCpKNMVk7ZWvBk-psQQZqz5w"
+                }
+            ]
+        }
+    ],
+    "redirects": [
+        {
+            "pattern": "discord",
+            "url": "https://discord.gg/q3aFBQM"
+        },
+        {
+            "pattern": "github",
+            "url": "https://github.com/AssistantApps"
+        },
+        {
+            "pattern": "patreon",
+            "url": "https://patreon.com/AssistantApps"
+        },
+        {
+            "pattern": "support",
+            "url": "https://assistantapps.freshdesk.com"
+        },
+        {
+            "pattern": "nms-roadmap",
+            "url": "https://github.com/orgs/AssistantNMS/projects/3/views/4"
+        },
+        {
+            "pattern": "kurt",
+            "url": "https://kurtlourens.com"
+        },
+        {
+            "pattern": "kronosios",
+            "url": "https://apps.apple.com/us/app/kronos-cod-zombies-companion/id1438078478"
+        },
+        {
+            "pattern": "kronosandroid",
+            "url": "https://play.google.com/store/apps/details?id=companion.kronosflutter"
+        }
+    ],
+    "headers": [
+        {
+            "hideInHtml": true,
+            "name": "Set-Cookie",
+            "value": "cross-site-cookie=name; SameSite=None; Secure"
+        },
+        {
+            "hideInHtml": true,
+            "name": "X-Clacks-Overhead",
+            "value": "GNU Terry Pratchett, Eddison the Magic Doggo"
+        },
+        {
+            "hideInHtml": true,
+            "name": "Clacks-Overhead",
+            "value": "GNU Terry Pratchett, Eddison the Magic Doggo"
+        },
+        {
+            "hideInHtml": true,
+            "name": "X-Powered-by",
+            "value": "Magic & the Distraction Squad"
+        }
+    ]
+}

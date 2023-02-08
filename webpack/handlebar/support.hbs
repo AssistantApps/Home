@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    {{> components/documentHead documentTitle="Support"}}
+
+</head>
+
+<body class="is-preload">
+    <div id="page-wrapper" class="bootstrap-wrapper">
+        <header id="header" class="noselect alt">
+            <label id="menu-toggle" for="toggle">Menu</label>
+            <input type="checkbox" id="toggle">
+            <label id="menu" class="noselect" for="toggle">
+                <div class="menu-inner">
+                    <ul class="links">
+                        <li>
+                            <a href="{{urlref link.tools}}" title="Translation Tool" target="_blank"
+                                rel="noopener noreferrer">Translation Tool</a>
+                        </li>
+                        <li>
+                            <a href="{{urlref kurt.website}}" title="{{kurt.name}}" target="_blank"
+                                rel="noopener noreferrer">{{kurt.name}}</a>
+                        </li>
+                        {{#each assistantApps}}
+                        {{#unless @last}}
+                        <li>
+                            <a href="{{urlref link}}" title="{{title}}" target="_blank"
+                                rel="noopener noreferrer">{{title}}</a>
+                        </li>
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+                    <label id="menu-toggle-close" for="toggle">X</label>
+                </div>
+            </label>
+        </header>
+
+        <section id="wrapper-work" class="wrapper primary-colour">
+            <div class="inner">
+                <h2>Patreon</h2>
+                <h3 style="font-weight: 100;">Special thank you to these amazing people 💖</h3>
+                <br />
+                <assistant-apps-patreon-list>
+                    <div slot="loading" style="text-align: center;">
+                        <img src="/assets/img/loader.svg" height="100px" draggable="false" alt="loading-animation">
+                    </div>
+                </assistant-apps-patreon-list>
+            </div>
+        </section>
+
+        <hr />
+
+        {{> components/footer }}
+
+    </div>
+
+    {{> components/scripts webComponent="true" }}
+</body>
+
+</html>

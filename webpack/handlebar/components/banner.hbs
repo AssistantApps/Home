@@ -1,0 +1,83 @@
+<section id="banner">
+    <div class="inner">
+        <div class="row">
+            <div class="banner-text col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                {{#if isAppSpecific}}
+                <p class="primary-text font-weight-heavy">Download</p>
+                <h2 class="font-weight-light">
+                    <span class="font-weight-light">{{titleStart}}</span><br />
+                    <span class="font-weight-heavy">{{titleEnd}}</span>
+                </h2>
+                <p>{{description}}</p>
+                {{else}}
+                <h2 class="font-weight-light">
+                    <span class="apps-start-word-slider font-weight-light"></span><br class="noselect" />
+                    <span class="apps-end-word-slider font-weight-heavy"></span>
+                </h2>
+                <p>{{subtitle}}</p>
+                <div class="scroll-down-arrows"><span></span><span></span><span></span></div>
+                {{/if}}
+            </div>
+
+            <div class="banner-screenshot-stack noselect col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <div class="star-parallax">
+                    <div data-depth="0.05" class="star-container">
+                        <div class="star four-pointed-star"></div>
+                    </div>
+                    <div data-depth="0.75" class="star-container">
+                        <div class="star four-pointed-star"></div>
+                    </div>
+                    <div data-depth="0.33" class="star-container">
+                        <div class="star four-pointed-star"></div>
+                    </div>
+                    <div data-depth="0.25" class="star-container">
+                        <div class="star four-pointed-star"></div>
+                    </div>
+                    <div data-depth="0.05" class="star-container">
+                        <div class="star four-pointed-star"></div>
+                    </div>
+                </div>
+
+                <div class="screenshot-stack">
+                    <div class="apps-screenshot">
+                        <div class="screenshot-inner">
+                            <div class="apps-left-screenshot-slider-bg"></div>
+                            <div class="assistantapps-logo"></div>
+                            {{#if isAppSpecific}}
+                            <img src="{{screenshotLeft}}" loading="lazy" draggable="false" alt="screenshotLeft"
+                                class="screenshotLeft" />
+                            {{else}}
+                            <div class="apps-left-screenshot-slider"></div>
+                            {{/if}}
+                            <img src="/assets/img/screenshot-frame.png" loading="lazy" draggable="false"
+                                alt="phone frame" class="screenshot-frame" />
+                        </div>
+                    </div>
+                    <div class="apps-screenshot">
+                        <div class="screenshot-inner">
+                            <div class="apps-left-screenshot-slider-bg"></div>
+                            <div class="assistantapps-logo"></div>
+                            {{#if isAppSpecific}}
+                            <img src="{{screenshotRight}}" loading="lazy" draggable="false" alt="screenshotRight"
+                                class="screenshotRight" />
+                            {{else}}
+                            <div class="apps-right-screenshot-slider"></div>
+                            {{/if}}
+                            <img src="/assets/img/screenshot-frame.png" loading="lazy" draggable="false"
+                                alt="phone frame" class="screenshot-frame" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{#unless isAppSpecific}}
+            <img src="/assets/img/animation-paused.svg" loading="lazy" draggable="false" alt="animation paused"
+                class="noselect animation-paused-icon" />
+            {{/unless}}
+        </div>
+
+        {{#if @partial-block}}
+        {{> @partial-block }}
+        {{/if}}
+    </div>
+</section>

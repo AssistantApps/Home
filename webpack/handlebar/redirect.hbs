@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="application-name" content="{{title}}">
+  <title>{{title}}</title>
+  <link rel="canonical" href="{{url}}" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,700">
+</head>
+
+<body align="center" style="margin-top: 100px">
+  <h1>Redirecting to new domain</h1>
+  <a href="{{url}}" style="text-align: center; font-size: 1.75em;" title="{{url}}">
+    {{url}}
+  </a>
+  <a rel="me" href="https://nomanssky.social/@assistantnms" style="opacity: 0.1">Mastodon</a>
+</body>
+<script>
+  window.location = "{{url}}";
+  setTimeout(function () {
+    window.location = "{{url}}";
+  }, 1000)
+</script>
+
+</html>

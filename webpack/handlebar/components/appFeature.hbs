@@ -1,0 +1,14 @@
+<article class="work-card">
+    <div class="inner">
+        <a href="{{urlref link}}" class="noselect image" title="{{title}}" target="_blank" rel="noopener noreferrer">
+            <img src="{{image}}" alt="{{title}}" />
+        </a>
+        <h3>{{title}}</h3>
+        <p>{{description}}</p>
+        <div class="sublinks">
+            {{#each subLinks}}
+            <a href="{{urlref url}}" title="{{title}}" target="_blank" rel="noopener noreferrer">{{title}}</a>
+            {{/each}}
+        </div>
+    </div>
+</article>

@@ -1,0 +1,104 @@
+#header {
+    margin: 0.25em auto 0 auto;
+    width: 55em;
+    height: 4em;
+}
+
+#menu-toggle {
+    display: inline;
+    position: absolute;
+    top: 1em;
+
+    @include vendor("transition", "background-color #{_duration(transition)} ease-in-out");
+    border-radius: _size(border-radius);
+    box-shadow: inset 0 0 0 2px var(--primary-text-colour);
+    padding: 0 1em;
+    font-size: 1.25em;
+
+    &:before {
+        content: "\1f354";
+        line-height: inherit;
+        font-family: "icomoon";
+    }
+
+    &:hover {
+        background-color: _palette(border-bg);
+    }
+
+    &:active {
+        background-color: _palette(border2-bg);
+    }
+
+    &:before {
+        float: right;
+        margin-left: 0.75em;
+    }
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    padding: 0;
+    background-color: #060b0fcc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1000;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: all 250ms ease-in-out;
+
+    .menu-inner {
+        position: relative;
+        min-width: 600px;
+        margin: 0 auto;
+        padding: 2em;
+        background-color: _palette(textbg);
+        border-radius: 25px;
+
+        a {
+            text-decoration: none;
+            border: none;
+        }
+
+        li {
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 250ms ease-in-out;
+            margin-bottom: 2px;
+            padding: 0.25em;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.2);
+
+                a {
+                    color: var(--primary-text-colour) !important;
+                }
+            }
+        }
+
+        #menu-toggle-close {
+            position: absolute;
+            top: -1em;
+            right: -1em;
+            padding: 0.5em 1em;
+            border-radius: 100%;
+            background-color: _palette(textbg);
+            box-shadow: -7px 7px 10px -2px rgb(0 0 0 / 75%);
+            cursor: pointer;
+        }
+    }
+}
+
+#menu::before {
+    display: none;
+}
+
+#toggle:checked ~ #menu {
+    opacity: 1;
+    pointer-events: unset;
+}

@@ -1,0 +1,39 @@
+{
+  "name": "assistant_apps",
+  "version": "2.0.0",
+  "description": "AssistantApps Home Website",
+  "author": "Kurt Lourens",
+  "scripts": {
+    "build": "npm-run-all --sequential data:* javascript:* sass:*",
+    "data": "npm-run-all --sequential data:*",
+    "data:live": "node webpack/node/generateLiveJson.js",
+    "data:project": "node webpack/node/generateProjectJson.js",
+    "javascript": "npm-run-all --sequential javascript:*",
+    "javascript:main": "set NODE_OPTIONS=--openssl-legacy-provider && webpack --progress --profile --mode production",
+    "javascript:metapages": "node ./webpack/node/generateAppPages.js",
+    "quickfix": "set NODE_OPTIONS=--openssl-legacy-provider && webpack --progress --profile --mode production",
+    "sass": "npm-run-all --sequential sass:*",
+    "sass:main": "sass webpack/scss/main.scss assets/css/main.css",
+    "sass:noscript": "sass webpack/scss/noscript.scss assets/css/noscript.css",
+    "watch:sass": "nodemon -e scss -x \"npm run sass:main\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AssistantApps/Home.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AssistantApps/Home/issues"
+  },
+  "homepage": "https://assistantapps.com",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^1.2.3",
+    "handlebars-webpack-plugin": "^2.2.1",
+    "move-file": "^2.0.0",
+    "nodemon": "^2.0.20",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.57.1",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1"
+  }
+}

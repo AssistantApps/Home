@@ -1,0 +1,99 @@
+{
+    "headers": [
+        "Content-Security-Policy",
+        "X-Content-Security-Policy",
+        "X-WebKit-CSP"
+    ],
+    "options": [
+        {
+            "name": "default-src",
+            "values": [
+                "'none'"
+            ]
+        },
+        {
+            "name": "script-src",
+            "values": [
+                "'self'",
+                "'report-sample'",
+                "'nonce-is-preload-handler'",
+                "'sha256-iN7wpJdxHlpujRppkOA8N0+Mzp0ZqZr3lCtxM00Y63c='",
+                "cdnjs.cloudflare.com",
+                "www.googletagmanager.com",
+                "js.hcaptcha.com",
+                "webcomp.assistantapps.com"
+            ]
+        },
+        {
+            "name": "style-src",
+            "values": [
+                "'self'",
+                "'unsafe-inline'",
+                "'report-sample'",
+                "'nonce-google-font'",
+                "https://fonts.googleapis.com/css2"
+            ]
+        },
+        {
+            "name": "img-src",
+            "values": [
+                "'self'",
+                "data:",
+                "cdn.assistantapps.com",
+                "cdn-usr.assistantapps.com"
+            ]
+        },
+        {
+            "name": "font-src",
+            "values": [
+                "'self'",
+                "fonts.gstatic.com;",
+                "frame-src",
+                "newassets.hcaptcha.com"
+            ]
+        },
+        {
+            "name": "manifest-src",
+            "values": [
+                "http://127.0.0.1:8080/manifest.json",
+                "https://assistantapps.com/manifest.json"
+            ]
+        },
+        {
+            "name": "connect-src",
+            "values": [
+                "api.assistantapps.com"
+            ]
+        },
+        {
+            "name": "base-uri",
+            "values": [
+                "'self'"
+            ]
+        },
+        {
+            "hideInHtml": true,
+            "name": "report-uri",
+            "values": [
+                "'none'"
+            ]
+        },
+        {
+            "name": "form-action",
+            "values": [
+                "'none'"
+            ]
+        },
+        {
+            "hideInHtml": true,
+            "name": "frame-ancestors",
+            "values": [
+                "'none'"
+            ]
+        },
+        {
+            "name": "upgrade-insecure-requests",
+            "values": []
+        }
+    ]
+}

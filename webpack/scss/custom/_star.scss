@@ -1,0 +1,187 @@
+body.parallax .star-parallax .star-container {
+    will-change: transform;
+}
+
+.star-parallax {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    .star-container {
+        height: 100%;
+        width: 100%;
+
+        .four-pointed-star {
+            --star-color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 1em auto;
+            width: 1em;
+            font-size: 0.75em;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+        }
+
+        &:nth-child(1) .four-pointed-star {
+            top: -15%;
+            left: 42%;
+            animation-name: starFadeInOut1;
+        }
+
+        &:nth-child(2) .four-pointed-star {
+            top: 0;
+            left: 100%;
+            font-size: 0.25em;
+            transform-origin: 2px 3px;
+            animation-name: starFadeInOut2;
+        }
+
+        &:nth-child(3) .four-pointed-star {
+            top: 65%;
+            opacity: 0.5;
+            animation-name: starFadeInOut3;
+        }
+
+        &:nth-child(4) .four-pointed-star {
+            top: 70%;
+            left: 110%;
+            font-size: 0.5em;
+            opacity: 0.75;
+            animation-name: starFadeInOut4;
+        }
+
+        &:nth-child(5) .four-pointed-star {
+            top: 110%;
+            left: 46%;
+            opacity: 0.25;
+            font-size: 0.2em;
+            animation-name: starFadeInOut5;
+        }
+    }
+}
+
+.four-pointed-star:before {
+    content: "";
+    position: absolute;
+    background: var(--star-color);
+    width: 1em;
+    height: 1.15em;
+    transform: rotate(-45deg) skewX(22.5deg) skewY(22.5deg);
+}
+
+.four-pointed-star:after {
+    content: "";
+    position: absolute;
+    background: var(--star-color);
+    width: 1em;
+    height: 1.15em;
+    transform: rotate(45deg) skewX(22.5deg) skewY(22.5deg);
+}
+
+@keyframes starFadeInOut1 {
+    0% {
+        transform: scale(1);
+    }
+
+    40% {
+        transform: scale(0.7);
+    }
+
+    60% {
+        transform: scale(0.8);
+    }
+
+    80% {
+        transform: scale(0.6);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes starFadeInOut2 {
+    0% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+
+    40% {
+        opacity: 0.5;
+    }
+
+    95% {
+        opacity: 0.5;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes starFadeInOut3 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes starFadeInOut3 {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(0.25);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes starFadeInOut4 {
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+}
+
+@keyframes starFadeInOut5 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(2em, 1em);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}

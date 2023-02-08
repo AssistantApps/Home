@@ -1,0 +1,10 @@
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>AssistantApps</ShortName>
+  <Description>Home page of the Assistant Apps. Get the apps on Google Play, Apple App Store and on the web</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16" type="image/x-icon">https://assistantapps.com/favicon.ico</Image>
+  <Url type="text/html" template="https://assistantapps.com?q={searchTerms}">
+    <Param name="searchTerms" value="{searchTerms}"/>
+  </Url>
+  <Url type="application/x-suggestions+json" template="https://assistantapps.com?q={searchTerms}"/>
+</OpenSearchDescription>
