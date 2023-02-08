@@ -1,9 +1,19 @@
-$appStartTitles: {{#each assistantApps}}{{#unless @last}}"{{{titleStart}}}",{{/unless}}{{/each}}
-$appEndTitles: {{#each assistantApps}}{{#unless @last}}"{{{titleEnd}}}",{{/unless}}{{/each}}
-$appImages: {{#each assistantApps}}{{#unless @last}}"{{{icon}}}",{{/unless}}{{/each}}
+@use "sass:math"
+
+$appStartTitles: {{#each assistantApps}}{{#unless hiddenOnFrontPage}}{{#unless
+@last}}"{{{titleStart}}}",{{/unless}}{{/unless}}{{/each}}
+$appEndTitles: {{#each assistantApps}}{{#unless hiddenOnFrontPage}}{{#unless
+@last}}"{{{titleEnd}}}",{{/unless}}{{/unless}}{{/each}}
+$appLeftScreenshots: {{#each assistantApps}}{{#unless hiddenOnFrontPage}}{{#unless
+@last}}"{{{screenshotLeft}}}",{{/unless}}{{/unless}}{{/each}}
+$appRightScreenshots: {{#each assistantApps}}{{#unless hiddenOnFrontPage}}{{#unless
+@last}}"{{{screenshotRight}}}",{{/unless}}{{/unless}}{{/each}}
+$appImages: {{#each assistantApps}}{{#unless hiddenOnFrontPage}}{{#unless
+@last}}"{{{icon}}}",{{/unless}}{{/unless}}{{/each}}
+
 $defaultAppImage: "{{assistantApps.0.icon}}"
 
-$appAnimationPerc: (100 / length($appStartTitles))
+$appAnimationPerc: (math.div(100, length($appStartTitles)))
 $appAnimationGapPerc: 5
-$appAnimationSecPerApp: 2.5
+$appAnimationSecPerApp: 3
 $appAnimationDuration: ($appAnimationSecPerApp * length($appStartTitles))

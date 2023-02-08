@@ -1,0 +1,96 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="application-name" content="{{meta.appName}}">
+<title>{{#if documentTitle}}{{documentTitle}} - {{/if}}{{meta.title}}</title>
+<link rel="icon" type="image/png" sizes="16x16" href="{{images.favicon.x16}}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{images.favicon.x32}}">
+<link rel="icon" type="image/png" sizes="96x96" href="{{images.favicon.x96}}">
+<link rel="icon" type="image/png" sizes="192x192" href="{{images.favicon.x192}}">
+
+<link rel="index" href="{{rootUrl}}">
+<link rel="canonical" href="{{rootUrl}}">
+<meta name="referrer" content="no-referrer">
+<link rel="manifest" href="/manifest.json">
+<link rel="author" href="/humans.txt">
+<link rel="me" href="{{kurt.email}}">
+<link rel="me" href="{{kurt.website}}" type="text/html">
+<link rel="search" href="/open-search.xml" type="application/opensearchdescription+xml" title="Search Title">
+
+<meta name="theme-color" content="{{theme.colour}}">
+<meta name="subject" content="{{meta.description}}">
+<meta name="description" content="{{meta.description}}">
+<meta name="rating" content="General">
+<meta name="robots" content="index,follow">
+
+<!-- Google -->
+<meta name="googlebot" content="index,follow">
+<meta name="google" content="nositelinkssearchbox">
+<meta name="mobile-web-app-capable" content="yes">
+
+<!-- Apple -->
+<link rel="apple-touch-icon" sizes="57x57" href="{{images.apple.x57}}">
+<link rel="apple-touch-icon" sizes="60x60" href="{{images.apple.x60}}">
+<link rel="apple-touch-icon" sizes="72x72" href="{{images.apple.x72}}">
+<link rel="apple-touch-icon" sizes="76x76" href="{{images.apple.x76}}">
+<link rel="apple-touch-icon" sizes="114x114" href="{{images.apple.x114}}">
+<link rel="apple-touch-icon" sizes="120x120" href="{{images.apple.x120}}">
+<link rel="apple-touch-icon" sizes="144x144" href="{{images.apple.x144}}">
+<link rel="apple-touch-icon" sizes="152x152" href="{{images.apple.x152}}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{images.apple.x180}}">
+<link rel="mask-icon" href="{{images.maskIcon}}" color="{{theme.maskColour}}">
+<!-- <link rel="apple-touch-startup-image" href="/path/to/launch.png"> -->
+<meta name="apple-mobile-web-app-title" content="{{meta.appName}}">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="{{twitter.metaImageSize}}">
+<meta name="twitter:site" content="{{twitter.handle}}">
+<meta name="twitter:creator" content="{{kurt.twitter}}">
+<meta name="twitter:url" content="{{twitter.url}}">
+<meta name="twitter:title" content="{{meta.appName}}">
+<meta name="twitter:description" content="{{meta.description}}">
+<meta name="twitter:image" content="{{images.twitter}}">
+<meta name="twitter:image:alt" content="{{twitter.imageAlt}}">
+
+<!-- Facebook -->
+<meta property="og:url" content="{{rootUrl}}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{meta.title}}">
+<meta property="og:image" content="{{images.facebook}}">
+<meta property="og:image:alt" content="{{twitter.imageAlt}}">
+<meta property="og:description" content="{{meta.description}}">
+<meta property="og:site_name" content="{{meta.title}}">
+<meta property="og:locale" content="en_UK">
+<meta property="article:author" content="{{kurt.name}}">
+
+<!-- Microsoft -->
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+<meta name="msapplication-config" content="browserconfig.xml">
+<meta name="msapplication-TileColor" content="{{theme.maskColour}}">
+
+<!-- HTTP Headers -->
+{{#each htmlHeaders}}
+<meta http-equiv="{{name}}" content="{{value}}" />
+{{/each}}
+
+<link rel="stylesheet" href="/assets/css/main.css?v={{version}}" />
+
+{{#if preloadMainImgs}}
+<link rel="preload" as="image" href="/assets/img/phone-bg.png">
+<link rel="preload" as="image" href="/assets/img/screenshot-frame.png">
+<link rel="preload" href="{{assistantApps.0.screenshotLeft}}" as="image">
+<link rel="preload" href="{{assistantApps.0.screenshotRight}}" as="image">
+{{/if}}
+{{#each preconnect}}
+<link rel="preconnect" href="{{this}}">
+{{/each}}
+{{#each assistantApps}}
+<link rel="preload" href="{{image}}" as="image">
+{{/each}}
+
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
+<noscript>
+    <link rel="stylesheet" href="/assets/css/noscript.css" />
+</noscript>

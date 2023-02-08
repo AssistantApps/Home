@@ -1,0 +1,158 @@
+#page-wrapper #banner {
+    @include padding(6em, 0, (0, 0, _size(wrapper-edges, large) * -0.5, 0));
+
+    .inner {
+        margin: 0 auto;
+        width: _size(inner);
+
+        > .row {
+            position: relative;
+            min-height: 560px;
+
+            .animation-paused-icon {
+                position: absolute;
+                top: -3em;
+                left: 50%;
+                width: 4em;
+                height: 4em;
+                transform: translate(-50%, -50%);
+                transition: all 500ms ease-in-out;
+                opacity: 0;
+            }
+
+            @media (hover: hover) {
+                &:hover {
+                    .animation-paused-icon {
+                        top: -3em;
+                        opacity: 0.5;
+                    }
+                    .apps-start-word-slider:after {
+                        animation-play-state: paused;
+                    }
+                    .apps-end-word-slider:after {
+                        animation-play-state: paused;
+                    }
+                    .apps-left-screenshot-slider {
+                        animation-play-state: paused;
+                    }
+                    .apps-right-screenshot-slider {
+                        animation-play-state: paused;
+                    }
+                }
+            }
+        }
+    }
+
+    .screenshot-stack,
+    .scroll-down-arrows {
+        @include vendor("transition", ("opacity 0.5s ease", "transform 0.5s ease", "filter 0.25s ease"));
+        @include vendor("transform", "translateX(0)");
+        @include vendor("transition-delay", "0.65s");
+        @include vendor("filter", "blur(0)");
+        opacity: 1;
+    }
+
+    h2 {
+        @include vendor("transition", ("opacity 0.5s ease", "transform 0.5s ease", "filter 0.25s ease"));
+        @include vendor("transform", "translateX(0)");
+        @include vendor("transition-delay", "0.65s");
+        @include vendor("filter", "blur(0)");
+        opacity: 1;
+        font-size: 2.75em;
+        font-variant: small-caps;
+        line-height: 1.25em;
+        margin-bottom: _size(element-margin) * 0.4;
+        padding-bottom: _size(element-margin) * 0.2;
+    }
+
+    p {
+        @include vendor("transition", ("opacity 0.5s ease", "transform 0.5s ease", "filter 0.25s ease"));
+        @include vendor("transform", "translateX(0)");
+        @include vendor("transition-delay", "0.8s");
+        @include vendor("filter", "blur(0)");
+        opacity: 0.8;
+        font-family: _font(family-heading);
+        font-size: 1em;
+        font-weight: _font(weight-heading);
+        letter-spacing: _font(kern-heading);
+        line-height: 2;
+        // text-transform: uppercase;
+    }
+
+    .store {
+        @include vendor("transition", ("opacity 0.5s ease", "transform 0.5s ease", "filter 0.25s ease"));
+        @include vendor("transform", "translateX(0)");
+        @include vendor("transition-delay", "0.8s");
+        @include vendor("filter", "blur(0)");
+    }
+
+    .star-parallax {
+        @include vendor("transition", ("opacity 1.5s ease"));
+        @include vendor("transition-delay", "0.8s");
+    }
+
+    @include breakpoint("<=large") {
+        @include padding(7em, 0, (0, 0, _size(wrapper-edges, large) * 0.5, 0));
+        margin-bottom: (_size(wrapper-edges, large) * -1);
+    }
+
+    @include breakpoint("<=medium") {
+        @include padding(12em, 3em, (0, 0, _size(wrapper-edges, medium) * 0.5, 0));
+
+        margin-bottom: (_size(wrapper-edges, medium) * -1);
+
+        .inner {
+            width: 100%;
+        }
+    }
+
+    @include breakpoint("<=small") {
+        @include padding(5em, 2em, (0, 0, _size(wrapper-edges, small) * 0.5, 0));
+
+        margin-bottom: (_size(wrapper-edges, small) * -1);
+
+        .logo {
+            margin: 0 0 (_size(element-margin) * 0.5) 0;
+
+            .icon {
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    body.is-preload & {
+        .logo {
+            @include vendor("transform", "translateY(0.5em)");
+            opacity: 0;
+        }
+
+        .screenshot-stack,
+        .scroll-down-arrows {
+            opacity: 0;
+            @include vendor("transform", "translateX(0.25em)");
+            @include vendor("filter", "blur(2px)");
+        }
+
+        h2 {
+            opacity: 0;
+            @include vendor("transform", "translateX(0.25em)");
+            @include vendor("filter", "blur(2px)");
+        }
+
+        p {
+            opacity: 0;
+            @include vendor("transform", "translateX(0.5em)");
+            @include vendor("filter", "blur(2px)");
+        }
+
+        .store {
+            opacity: 0;
+            @include vendor("transform", "translateX(5em)");
+            @include vendor("filter", "blur(2px)");
+        }
+
+        .star-parallax {
+            opacity: 0;
+        }
+    }
+}

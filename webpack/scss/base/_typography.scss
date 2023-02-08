@@ -6,6 +6,8 @@
 
 /* Type */
 
+@use "sass:math";
+
 body,
 input,
 select,
@@ -16,29 +18,32 @@ textarea {
     font-weight: _font(weight);
     line-height: 1.65;
 
-    @include breakpoint('<=xlarge') {
+    @include breakpoint("<=xlarge") {
         font-size: 13pt;
     }
 
-    @include breakpoint('<=large') {
+    @include breakpoint("<=large") {
         font-size: 12pt;
     }
 
-    @include breakpoint('<=medium') {
+    @include breakpoint("<=medium") {
         font-size: 12pt;
     }
 
-    @include breakpoint('<=small') {
+    @include breakpoint("<=small") {
         font-size: 12pt;
     }
 
-    @include breakpoint('<=xsmall') {
+    @include breakpoint("<=xsmall") {
         font-size: 12pt;
     }
 }
 
 a {
-    @include vendor('transition', 'color #{_duration(transition)} ease-in-out, border-bottom-color #{_duration(transition)} ease-in-out');
+    @include vendor(
+        "transition",
+        "color #{_duration(transition)} ease-in-out, border-bottom-color #{_duration(transition)} ease-in-out"
+    );
     border-bottom: dotted 1px _palette(fg-light);
     color: _palette(fg-bold);
     text-decoration: none;
@@ -60,10 +65,10 @@ a {
         text-transform: uppercase;
 
         &:before {
-            @include vendor('transition', 'background-color #{_duration(transition)} ease-in-out');
+            @include vendor("transition", "background-color #{_duration(transition)} ease-in-out");
             border-radius: 100%;
             border: solid 2px _palette(border);
-            font-family: _font('icomoon');
+            font-family: _font("icomoon");
             content: "\1f59d";
             display: inline-block;
             font-size: 1.25em;
@@ -155,13 +160,13 @@ h6 {
     font-size: 0.7em;
 }
 
-@include breakpoint('<=small') {
+@include breakpoint("<=small") {
     h2 {
         font-size: 1em;
     }
 
     h3 {
-        font-size: 0.8em
+        font-size: 0.8em;
     }
 }
 
@@ -181,7 +186,7 @@ blockquote {
     border-left: solid 4px _palette(border);
     font-style: italic;
     margin: 0 0 _size(element-margin) 0;
-    padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4) _size(element-margin);
+    padding: (math.div(_size(element-margin), 4)) 0 (math.div(_size(element-margin), 4)) _size(element-margin);
 }
 
 code {

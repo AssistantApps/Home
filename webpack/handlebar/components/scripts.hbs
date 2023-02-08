@@ -1,0 +1,22 @@
+{{#if parallax}}
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+<script async src="/assets/js/skrollr.min.js"></script>
+{{/if}}
+
+{{#if webComponent}}
+<script async src="http://webcomp.assistantapps.com/build/bundle.js"></script>
+{{/if}}
+
+{{#if hcaptcha}}
+<script async defer src="https://js.hcaptcha.com/1/api.js"></script>
+{{/if}}
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TSB514DX5T"></script>
+
+<script defer src="/assets/js/analytics.js"></script>
+<script defer src="/dist/bundle.js?v={{version}}"></script>
+
+<script defer nonce="is-preload-handler">
+    const bodyElem = document.getElementsByTagName('body');
+    bodyElem?.[0]?.classList?.remove?.('is-preload');
+</script>

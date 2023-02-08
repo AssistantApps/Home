@@ -1,4 +1,7 @@
-@import './_slider-generated.sass';
+@use "sass:math";
+@import "./_slider-generated.sass";
+
+$appIconSize: 50px;
 
 .apps-start-word-slider {
     &::after {
@@ -16,8 +19,8 @@
     }
 }
 
-#banner>.inner .apps-end-word-slider {
-    @include breakpoint('<medium') {
+#banner > .inner .apps-end-word-slider {
+    @include breakpoint("<medium") {
         display: block;
     }
 }
@@ -89,14 +92,14 @@
 }
 
 .apps-image-slider {
-    width: 50px;
-    height: 50px;
+    width: $appIconSize;
+    height: $appIconSize;
     background-image: url($defaultAppImage);
     background-repeat: round;
     animation: appsImageSliderText #{$appAnimationDuration}s infinite;
     border-radius: 5px;
 
-    @include breakpoint('<medium') {
+    @include breakpoint("<medium") {
         margin: 0 auto;
     }
 }
@@ -111,6 +114,84 @@
         }
 
         $image: nth($appImages, $imageIndex);
+
+        #{$percentageLower}#{"%"} {
+            opacity: 0;
+            background-image: url($image);
+        }
+
+        #{$percentageLower + $appAnimationGapPerc}#{"%"} {
+            opacity: 1;
+            background-image: url($image);
+        }
+
+        #{$percentage - $appAnimationGapPerc}#{"%"} {
+            opacity: 1;
+            background-image: url($image);
+        }
+
+        #{$percentage}#{"%"} {
+            opacity: 0;
+            background-image: url($image);
+        }
+    }
+}
+
+.apps-left-screenshot-slider {
+    background-image: url($defaultAppImage);
+    animation: appsLeftScreensAnim #{$appAnimationDuration}s infinite;
+    border-radius: 5px;
+}
+
+@keyframes appsLeftScreensAnim {
+    @for $imageIndex from 1 through length($appLeftScreenshots) {
+        $percentageLower: (($imageIndex - 1) * $appAnimationPerc) + 1;
+        $percentage: ($imageIndex * $appAnimationPerc);
+
+        @if $imageIndex==1 {
+            $percentageLower: 0;
+        }
+
+        $image: nth($appLeftScreenshots, $imageIndex);
+
+        #{$percentageLower}#{"%"} {
+            opacity: 0;
+            background-image: url($image);
+        }
+
+        #{$percentageLower + $appAnimationGapPerc}#{"%"} {
+            opacity: 1;
+            background-image: url($image);
+        }
+
+        #{$percentage - $appAnimationGapPerc}#{"%"} {
+            opacity: 1;
+            background-image: url($image);
+        }
+
+        #{$percentage}#{"%"} {
+            opacity: 0;
+            background-image: url($image);
+        }
+    }
+}
+
+.apps-right-screenshot-slider {
+    background-image: url($defaultAppImage);
+    animation: appsRightScreensAnim #{$appAnimationDuration}s infinite;
+    border-radius: 5px;
+}
+
+@keyframes appsRightScreensAnim {
+    @for $imageIndex from 1 through length($appRightScreenshots) {
+        $percentageLower: (($imageIndex - 1) * $appAnimationPerc) + 1;
+        $percentage: ($imageIndex * $appAnimationPerc);
+
+        @if $imageIndex==1 {
+            $percentageLower: 0;
+        }
+
+        $image: nth($appRightScreenshots, $imageIndex);
 
         #{$percentageLower}#{"%"} {
             opacity: 0;

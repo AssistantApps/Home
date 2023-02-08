@@ -2,91 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="application-name" content="{{meta.appName}}">
-    <title>{{meta.title}}</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="{{images.favicon.x16}}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{images.favicon.x32}}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{images.favicon.x96}}">
-    <link rel="icon" type="image/png" sizes="192x192" href="{{images.favicon.x192}}">
-
-    <link rel="index" href="{{rootUrl}}">
-    <link rel="canonical" href="{{rootUrl}}">
-    <meta name="referrer" content="no-referrer">
-    <link rel="manifest" href="manifest.json">
-    <link rel="author" href="humans.txt">
-    <link rel="me" href="{{kurt.email}}">
-    <link rel="me" href="{{kurt.website}}" type="text/html">
-    <link rel="search" href="open-search.xml" type="application/opensearchdescription+xml" title="Search Title">
-
-    <meta name="theme-color" content="{{theme.colour}}">
-    <meta name="subject" content="{{meta.description}}">
-    <meta name="description" content="{{meta.description}}">
-    <meta name="rating" content="General">
-    <meta name="robots" content="index,follow">
-
-    <!-- Google -->
-    <meta name="googlebot" content="index,follow">
-    <meta name="google" content="nositelinkssearchbox">
-    <meta name="mobile-web-app-capable" content="yes">
-
-    <!-- Apple -->
-    <link rel="apple-touch-icon" sizes="57x57" href="{{images.apple.x57}}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{images.apple.x60}}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{images.apple.x72}}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{images.apple.x76}}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{images.apple.x114}}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{images.apple.x120}}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{images.apple.x144}}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{images.apple.x152}}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{images.apple.x180}}">
-    <link rel="mask-icon" href="{{images.maskIcon}}" color="{{theme.maskColour}}">
-    <!-- <link rel="apple-touch-startup-image" href="/path/to/launch.png"> -->
-    <meta name="apple-mobile-web-app-title" content="{{meta.appName}}">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="{{twitter.metaImageSize}}">
-    <meta name="twitter:site" content="{{twitter.handle}}">
-    <meta name="twitter:creator" content="{{kurt.twitter}}">
-    <meta name="twitter:url" content="{{rootUrl}}">
-    <meta name="twitter:title" content="{{meta.appName}}">
-    <meta name="twitter:description" content="{{meta.description}}">
-    <meta name="twitter:image" content="{{images.twitter}}">
-    <meta name="twitter:image:alt" content="{{twitter.imageAlt}}">
-
-    <!-- Facebook -->
-    <meta property="og:url" content="{{rootUrl}}">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="{{meta.title}}">
-    <meta property="og:image" content="{{images.facebook}}">
-    <meta property="og:image:alt" content="{{twitter.imageAlt}}">
-    <meta property="og:description" content="{{meta.description}}">
-    <meta property="og:site_name" content="{{meta.title}}">
-    <meta property="og:locale" content="en_UK">
-    <meta property="article:author" content="{{kurt.name}}">
-
-    <!-- Microsoft -->
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
-    <meta name="msapplication-config" content="browserconfig.xml">
-    <meta name="msapplication-TileColor" content="{{theme.maskColour}}">
-
-    <link rel="stylesheet" href="assets/css/main.css" />
-
-    {{#each preconnect}}
-    <link rel="preconnect" href="{{this}}">
-    {{/each}}
-    {{#each assistantApps}}
-    <link rel="preload" href="{{icon}}" as="image">
-    {{/each}}
-
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
-    <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css" />
-    </noscript>
+    {{> components/documentHead preloadMainImgs="true"}}
 
     {{!-- JSON-LD --}}
     <script type="application/ld+json">
@@ -179,123 +95,97 @@
 </head>
 
 <body class="is-preload">
-    <div id="page-wrapper">
-        <header id="header" class="alt">
-            <h1>
-                <a href="/" title="Assistant for XYZ">
-                    <span class="apps-start-word-slider font-weight-light"></span>
-                    <span class="apps-end-word-slider font-weight-heavy"></span>
-                </a>
-            </h1>
-            <nav>
-                <a href="#menu" title="Menu">Menu</a>
-            </nav>
-        </header>
-        <nav id="menu">
-            <div class="inner">
-                <ul class="links">
-                    <li><a href="/" title="Home">Home</a></li>
-                    <li><a href="{{urlref link.tools}}" title="Translation Tool">Translation Tool</a></li>
-                    <li>
-                        <a href="{{urlref kurt.website}}" title="{{kurt.name}}" target="_blank"
-                            rel="noopener noreferrer">{{kurt.name}}</a>
-                    </li>
-                    {{#each assistantApps}}
-                    {{#unless @last}}
-                    <li>
-                        <a href="{{urlref link}}" title="{{title}}" target="_blank"
-                            rel="noopener noreferrer">{{title}}</a>
-                    </li>
-                    {{/unless}}
-                    {{/each}}
-                </ul>
-                <a href="#" class="close" title="close">Close</a>
-            </div>
-        </nav>
-        <section id="banner">
-            <div class="inner">
-                <div class="logo">
-                    <div class="apps-image-slider"></div>
-                </div>
-                <h2 class="font-weight-light">
-                    <span class="apps-start-word-slider font-weight-light"></span>
-                    <span class="apps-end-word-slider font-weight-heavy"></span>
-                </h2>
-                <p>{{subtitle}}</p>
-            </div>
-        </section>
-        <section id="wrapper">
-            {{#each assistantApps}}
-            {{> components/appSection }}
-
-            {{/each}}
-            <section class="wrapper primary-colour {{sectionclass assistantApps.length}}">
-                <div class="inner">
-                    <h2 class="major">{{additional}}</h2>
-                    <p>{{additionalDescription}}</p>
-                    <section class="features">
-                        {{#each features}}
-                        {{> components/appFeature }}
-
+    <div id="page-wrapper" class="bootstrap-wrapper">
+        <header id="header" class="noselect alt">
+            <label id="menu-toggle" for="toggle">Menu</label>
+            <input type="checkbox" id="toggle">
+            <label id="menu" class="noselect" for="toggle">
+                <div class="menu-inner">
+                    <ul class="links">
+                        <li>
+                            <a href="{{urlref link.tools}}" title="Translation Tool" target="_blank"
+                                rel="noopener noreferrer">Translation Tool</a>
+                        </li>
+                        <li>
+                            <a href="{{urlref kurt.website}}" title="{{kurt.name}}" target="_blank"
+                                rel="noopener noreferrer">{{kurt.name}}</a>
+                        </li>
+                        {{#each assistantApps}}
+                        {{#unless @last}}
+                        <li>
+                            <a href="{{urlref link}}" title="{{title}}" target="_blank"
+                                rel="noopener noreferrer">{{title}}</a>
+                        </li>
+                        {{/unless}}
                         {{/each}}
-                    </section>
-                    <!-- <ul class="actions">
-						<li><a href="#" class="button">Browse All</a></li>
-					</ul> -->
+                    </ul>
+                    <label id="menu-toggle-close" for="toggle">X</label>
                 </div>
-            </section>
+            </label>
+        </header>
+
+        {{> components/banner }}
+
+        <section id="wrapper">
+            <h2 class="mb-1">Our Assistants</h2>
+
+            <div class="features">
+                {{#each assistantApps}}
+                {{> components/appSection }}
+                {{/each}}
+            </div>
         </section>
-        <section id="footer">
+
+        <section id="wrapper-work" class="wrapper primary-colour">
             <div class="inner">
-                <h2 class="major">{{footer}}</h2>
-                <p>{{footerDescription}}</p>
+                <h2>{{additional}}</h2>
+                <p class="mb-2">{{additionalDescription}}</p>
+
+                <div class="features">
+                    {{#each features}}
+                    {{> components/appFeature }}
+                    {{/each}}
+                </div>
+            </div>
+        </section>
+
+        <section id="footer">
+            <div class="inner noselect">
+                <h2>{{footer}}</h2>
+                <p class="mb-2">{{footerDescription}}</p>
                 <form id="contact_form">
-                    <div class="fields">
-                        <div class="field">
-                            <label for="name">Name</label>
-                            <input type="text" name="name" id="name" />
+                    <div class="fields row">
+                        <div class="field col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            <input type="text" name="name" placeholder="Enter your name" id="name" />
                         </div>
-                        <div class="field">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" />
+                        <div class="field col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            <input type="email" name="email" placeholder="Enter your email" id="email" />
                         </div>
-                        <div class="field">
-                            <label for="message">Message</label>
-                            <textarea name="message" id="message" rows="4"></textarea>
+                        <div class="field col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <textarea name="message" id="message" placeholder="Enter your message" rows="4"></textarea>
                         </div>
                     </div>
-                    <div class="h-captcha" data-sitekey="916895db-249a-4ae3-bf39-9fe42e72d196"></div>
+                    <div class="h-captcha" data-theme="dark" data-sitekey="916895db-249a-4ae3-bf39-9fe42e72d196"></div>
                     <ul class="actions">
-                        <li><input id="submit" type="submit" value="Send Message" /></li>
+                        <li><input id="submit" type="submit" value="Submit" /></li>
                     </ul>
                 </form>
-                <ul class="contact">
-                    {{#each links}}
-                    <li class="{{class}}"><a href="{{urlref url}}" title="{{alt}}" target="_blank"
-                            rel="noopener noreferrer">{{title}}</a>
-                    </li>
-                    {{/each}}
-                </ul>
                 <div id="success_message">
                     <h2>Successfully submitted contact form!</h2>
                 </div>
                 <div id="error_message">
                     <h2>Sorry!! Something went wrong, please try sending an email instead.</h2>
                 </div>
-                <ul class="copyright">
-                    <li>&copy; {{meta.appName}}. All rights reserved.</li>
-                    <li>Design: <a href="http://html5up.net" title="html5up" target="_blank"
-                            rel="noopener noreferrer">HTML5 UP</a></li>
-                    <li>{{version}}</li>
-                </ul>
             </div>
         </section>
 
+        <hr />
+
+        {{> components/footer }}
+
     </div>
 
-    <!-- Scripts -->
-    <script src="/dist/bundle.js"></script>
-    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    {{> components/scripts parallax="true" hcaptcha="true" }}
 </body>
 
 </html>

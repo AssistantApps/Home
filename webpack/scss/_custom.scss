@@ -1,49 +1,13 @@
-@import './custom/slider';
-@import './custom/wrapper';
-@import './custom/buttons';
-@import './custom/icomoon';
-
-#header h1 {
-    @include breakpoint('<xsmall') {
-        display: none;
-    }
-}
-
-#banner>.inner {
-    @include breakpoint('<medium') {
-        text-align: center;
-    }
-}
-
-#menu .inner {
-    width: 95vw;
-
-    @include breakpoint('>=medium') {
-        width: 50vw;
-    }
-
-    ul.links li a {
-        text-transform: none;
-    }
-}
-
-ul.contact {
-    margin-top: 1em;
-
-    li a {
-        text-decoration: none;
-        border-bottom: none;
-
-        font-family: "Raleway", sans-serif;
-        font-size: 1em;
-        line-height: 2em;
-    }
-}
-
-.font-weight-light {
-    font-weight: 200;
-}
-
-.font-weight-heavy {
-    font-weight: 500;
-}
+@import "./custom/general";
+@import "./custom/background";
+@import "./custom/banner";
+@import "./custom/slider";
+@import "./custom/screenshot";
+@import "./custom/scroll-down-indicator";
+@import "./custom/wrapper";
+@import "./custom/footer";
+@import "./custom/icomoon";
+@import "./custom/menu";
+@import "./custom/star";
+@import "./custom/app-page";
+@import "./custom/breakpoints";

@@ -1,0 +1,19 @@
+RewriteEngine On
+
+Header add Content-Security-Policy: "default-src 'none'; script-src 'self' 'report-sample' 'nonce-is-preload-handler' 'sha256-iN7wpJdxHlpujRppkOA8N0+Mzp0ZqZr3lCtxM00Y63c=' cdnjs.cloudflare.com www.googletagmanager.com js.hcaptcha.com webcomp.assistantapps.com; style-src 'self' 'unsafe-inline' 'report-sample' 'nonce-google-font' https://fonts.googleapis.com/css2; img-src 'self' data: cdn.assistantapps.com cdn-usr.assistantapps.com; font-src 'self' fonts.gstatic.com; frame-src newassets.hcaptcha.com; manifest-src http://127.0.0.1:8080/manifest.json https://assistantapps.com/manifest.json; connect-src api.assistantapps.com; base-uri 'self'; report-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests;"
+Header add X-Content-Security-Policy: "default-src 'none'; script-src 'self' 'report-sample' 'nonce-is-preload-handler' 'sha256-iN7wpJdxHlpujRppkOA8N0+Mzp0ZqZr3lCtxM00Y63c=' cdnjs.cloudflare.com www.googletagmanager.com js.hcaptcha.com webcomp.assistantapps.com; style-src 'self' 'unsafe-inline' 'report-sample' 'nonce-google-font' https://fonts.googleapis.com/css2; img-src 'self' data: cdn.assistantapps.com cdn-usr.assistantapps.com; font-src 'self' fonts.gstatic.com; frame-src newassets.hcaptcha.com; manifest-src http://127.0.0.1:8080/manifest.json https://assistantapps.com/manifest.json; connect-src api.assistantapps.com; base-uri 'self'; report-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests;"
+Header add X-WebKit-CSP: "default-src 'none'; script-src 'self' 'report-sample' 'nonce-is-preload-handler' 'sha256-iN7wpJdxHlpujRppkOA8N0+Mzp0ZqZr3lCtxM00Y63c=' cdnjs.cloudflare.com www.googletagmanager.com js.hcaptcha.com webcomp.assistantapps.com; style-src 'self' 'unsafe-inline' 'report-sample' 'nonce-google-font' https://fonts.googleapis.com/css2; img-src 'self' data: cdn.assistantapps.com cdn-usr.assistantapps.com; font-src 'self' fonts.gstatic.com; frame-src newassets.hcaptcha.com; manifest-src http://127.0.0.1:8080/manifest.json https://assistantapps.com/manifest.json; connect-src api.assistantapps.com; base-uri 'self'; report-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests;"
+Header add Set-Cookie: "cross-site-cookie=name; SameSite=None; Secure"
+Header add X-Clacks-Overhead: "GNU Terry Pratchett, Eddison the Magic Doggo"
+Header add Clacks-Overhead: "GNU Terry Pratchett, Eddison the Magic Doggo"
+Header add X-Powered-by: "Magic & the Distraction Squad"
+
+
+RewriteRule ^discord/(.*)$ https://discord.gg/q3aFBQM?ref=AssistantApps [R=301,NC,L]
+RewriteRule ^github/(.*)$ https://github.com/AssistantApps?ref=AssistantApps [R=301,NC,L]
+RewriteRule ^patreon/(.*)$ https://patreon.com/AssistantApps?ref=AssistantApps [R=301,NC,L]
+RewriteRule ^support/(.*)$ https://assistantapps.freshdesk.com?ref=AssistantApps [R=301,NC,L]
+RewriteRule ^nms-roadmap/(.*)$ https://github.com/orgs/AssistantNMS/projects/3/views/4?ref=AssistantApps [R=301,NC,L]
+RewriteRule ^kurt/(.*)$ https://kurtlourens.com?ref=AssistantApps [R=301,NC,L]
+RewriteRule ^kronosios/(.*)$ https://apps.apple.com/us/app/kronos-cod-zombies-companion/id1438078478?ref=AssistantApps [R=301,NC,L]
+RewriteRule ^kronosandroid/(.*)$ https://play.google.com/store/apps/details?id=companion.kronosflutter&amp;ref=AssistantApps [R=301,NC,L]

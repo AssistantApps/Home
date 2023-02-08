@@ -1,0 +1,194 @@
+$headerSize: 4em;
+$storeIconSize: 50px;
+
+body.app-specific {
+    height: unset !important;
+
+    #header.app-specific {
+        position: relative;
+        display: flex;
+        height: $headerSize;
+
+        a {
+            text-decoration: none;
+            border: unset;
+        }
+
+        .header-logo,
+        .header-download {
+            flex: 1;
+            min-width: $headerSize;
+            min-height: $headerSize;
+        }
+
+        .header-logo {
+            padding: 0.5em;
+
+            img {
+                width: #{$headerSize - 1em};
+                height: #{$headerSize - 1em};
+                border-radius: 0.5em;
+            }
+        }
+
+        .header-center {
+            text-align: center;
+            flex-grow: 5;
+
+            a {
+                display: inline-block;
+                margin: 0 0.75em;
+                line-height: $headerSize;
+                transition: color 250ms ease-in-out;
+
+                &:hover {
+                    color: var(--primary-text-colour) !important;
+                }
+            }
+        }
+
+        .header-download {
+            flex: 2;
+
+            a {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                background-color: var(--primary-text-colour);
+                padding: 0.5em 1em;
+                border-radius: 15px;
+                transform: translateY(-50%);
+                transition: transform 250ms ease-in-out;
+
+                &:after {
+                    content: "🖝";
+                    line-height: inherit;
+                    font-family: "icomoon";
+                    float: right;
+                    margin-left: 0.75em;
+                }
+
+                &:hover {
+                    transform: translateY(-50%) scale(110%);
+                }
+            }
+        }
+
+        + hr {
+            margin: 0.5em 0 0 0;
+            opacity: 0.5;
+        }
+    }
+
+    #page-wrapper #banner {
+        padding-top: 4em;
+        margin-bottom: 4em;
+
+        .inner > .row {
+            min-height: unset;
+
+            .banner-text {
+                h2 {
+                    margin-bottom: 0;
+                }
+                p {
+                    line-height: unset;
+
+                    &.primary-text.font-weight-heavy {
+                        margin: 0;
+                        font-weight: 800;
+                        font-size: 0.75em;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            .banner-screenshot-stack {
+                padding-left: 3em;
+
+                .star-parallax .star-container {
+                    &:nth-child(3) .four-pointed-star {
+                        left: 10%;
+                    }
+                    &:nth-child(4) .four-pointed-star {
+                        left: 100%;
+                    }
+                }
+
+                img.screenshotLeft,
+                img.screenshotRight {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 100%;
+                    z-index: -1;
+                }
+            }
+        }
+
+        .store {
+            margin-top: 1em;
+
+            .store-list {
+                display: flex;
+                gap: 1em;
+
+                a.badge {
+                    border-bottom: unset;
+                    transition: transform 250ms ease-in-out;
+
+                    &:hover {
+                        transform: scale(105%);
+                    }
+
+                    img {
+                        max-width: 11em;
+                    }
+                }
+            }
+
+            .sublinks {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1em;
+                margin-top: 0.5em;
+
+                .store-icon {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 0.5em;
+                    border-radius: 8px;
+                    padding: 0.45em 0.75em;
+                    border: 2px solid #bdbdbd;
+                    transition: all 150ms ease-in-out;
+
+                    img {
+                        max-width: $storeIconSize;
+                        max-height: $storeIconSize;
+                    }
+
+                    &:hover {
+                        transform: scale(105%);
+
+                        img {
+                            transform: unset;
+                        }
+                    }
+
+                    .content {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        p {
+                            margin: 0;
+                            transition: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

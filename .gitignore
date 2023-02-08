@@ -1,6 +1,7 @@
 /node_modules
 assets/css/main.css
 assets/css/main.css.map
+/dist
 dist/bundle.js
 dist/bundle.js.LICENSE.txt
 /Discord
@@ -11,3 +12,12 @@ dist/bundle.js.LICENSE.txt
 /kurt
 /kronosios
 /kronosandroid
+/nms-roadmap
+/forest
+/kronos
+/nms
+/sms
+/nms-roadmap
+/support
+/patreon
+/dkm
