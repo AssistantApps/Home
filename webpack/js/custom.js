@@ -14,6 +14,7 @@ $(function () {
             if ((screen?.width ?? 0) > 1000) {
                 var s = skrollr.init(); // global skrollr instance
                 starsParallax();
+                document.getElementsByTagName('body')?.[0]?.classList?.add('parallax')
             }
         } catch { }
     }

@@ -1,6 +1,6 @@
 {
   "name": "assistant_apps",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "AssistantApps Home Website",
   "author": "Kurt Lourens",
   "scripts": {
@@ -9,7 +9,7 @@
     "data:live": "node webpack/node/generateLiveJson.js",
     "data:project": "node webpack/node/generateProjectJson.js",
     "javascript": "npm-run-all --sequential javascript:*",
-    "javascript:main": "webpack --progress --profile --mode production",
+    "javascript:main": "set NODE_OPTIONS=--openssl-legacy-provider && webpack --progress --profile --mode production",
     "javascript:metapages": "node ./webpack/node/generateAppPages.js",
     "quickfix": "set NODE_OPTIONS=--openssl-legacy-provider && webpack --progress --profile --mode production",
     "sass": "npm-run-all --sequential sass:*",

@@ -1,3 +1,7 @@
+body.parallax .star-parallax .star-container {
+    will-change: transform;
+}
+
 .star-parallax {
     position: absolute;
     top: 0;
