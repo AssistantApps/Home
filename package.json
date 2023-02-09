@@ -4,7 +4,7 @@
   "description": "AssistantApps Home Website",
   "author": "Kurt Lourens",
   "scripts": {
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && npm-run-all --sequential data:* javascript:* sass:*",
+    "build": "npm-run-all --sequential data:* javascript:* sass:*",
     "data": "npm-run-all --sequential data:*",
     "data:live": "node webpack/node/generateLiveJson.js",
     "data:project": "node webpack/node/generateProjectJson.js",
