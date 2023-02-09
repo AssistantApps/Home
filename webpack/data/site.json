@@ -217,6 +217,7 @@
         },
         {
             "shortCode": "dkm",
+            "hiddenOnMenu": true,
             "hiddenOnFrontPage": true,
             "game": "Dinkum",
             "title": "Assistant for Dinkum",
@@ -244,6 +245,7 @@
             ]
         },
         {
+            "hiddenOnMenu": true,
             "game": "Coming Soon",
             "title": "Assistant for Unknown",
             "titleStart": "Coming Soon",

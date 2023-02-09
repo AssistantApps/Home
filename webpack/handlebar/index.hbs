@@ -111,7 +111,7 @@
                                 rel="noopener noreferrer">{{kurt.name}}</a>
                         </li>
                         {{#each assistantApps}}
-                        {{#unless @last}}
+                        {{#unless hiddenOnMenu}}
                         <li>
                             <a href="{{urlref link}}" title="{{title}}" target="_blank"
                                 rel="noopener noreferrer">{{title}}</a>
