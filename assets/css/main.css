@@ -2299,24 +2299,6 @@ body.app-specific:after {
   transition: all 500ms ease-in-out;
   opacity: 0;
 }
-@media (hover: hover) {
-  #page-wrapper #banner .inner > .row:hover .animation-paused-icon {
-    top: -3em;
-    opacity: 0.5;
-  }
-  #page-wrapper #banner .inner > .row:hover .apps-start-word-slider:after {
-    animation-play-state: paused;
-  }
-  #page-wrapper #banner .inner > .row:hover .apps-end-word-slider:after {
-    animation-play-state: paused;
-  }
-  #page-wrapper #banner .inner > .row:hover .apps-left-screenshot-slider {
-    animation-play-state: paused;
-  }
-  #page-wrapper #banner .inner > .row:hover .apps-right-screenshot-slider {
-    animation-play-state: paused;
-  }
-}
 #page-wrapper #banner .screenshot-stack,
 #page-wrapper #banner .scroll-down-arrows {
   -moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease, -moz-filter 0.25s ease;
@@ -2549,35 +2531,35 @@ body.is-preload #page-wrapper #banner .star-parallax {
   }
   51% {
     opacity: 0;
-    content: "Kronos:";
+    content: "Assistant for";
   }
   56% {
     opacity: 1;
-    content: "Kronos:";
+    content: "Assistant for";
   }
   70% {
     opacity: 1;
-    content: "Kronos:";
+    content: "Assistant for";
   }
   75% {
     opacity: 0;
-    content: "Kronos:";
+    content: "Assistant for";
   }
   76% {
     opacity: 0;
-    content: "Assistant for";
+    content: "Kronos:";
   }
   81% {
     opacity: 1;
-    content: "Assistant for";
+    content: "Kronos:";
   }
   95% {
     opacity: 1;
-    content: "Assistant for";
+    content: "Kronos:";
   }
   100% {
     opacity: 0;
-    content: "Assistant for";
+    content: "Kronos:";
   }
 }
 @keyframes appsWordSliderEndText {
@@ -2615,35 +2597,35 @@ body.is-preload #page-wrapper #banner .star-parallax {
   }
   51% {
     opacity: 0;
-    content: "Guides for Zombies";
+    content: "The Forest";
   }
   56% {
     opacity: 1;
-    content: "Guides for Zombies";
+    content: "The Forest";
   }
   70% {
     opacity: 1;
-    content: "Guides for Zombies";
+    content: "The Forest";
   }
   75% {
     opacity: 0;
-    content: "Guides for Zombies";
+    content: "The Forest";
   }
   76% {
     opacity: 0;
-    content: "The Forest";
+    content: "Guides for Zombies";
   }
   81% {
     opacity: 1;
-    content: "The Forest";
+    content: "Guides for Zombies";
   }
   95% {
     opacity: 1;
-    content: "The Forest";
+    content: "Guides for Zombies";
   }
   100% {
     opacity: 0;
-    content: "The Forest";
+    content: "Guides for Zombies";
   }
 }
 .apps-image-slider {
@@ -2695,35 +2677,35 @@ body.is-preload #page-wrapper #banner .star-parallax {
   }
   51% {
     opacity: 0;
-    background-image: url("https://cdn.assistantapps.com/icon/kronos.jpg");
+    background-image: url("https://cdn.assistantapps.com/icon/forest.jpg");
   }
   56% {
     opacity: 1;
-    background-image: url("https://cdn.assistantapps.com/icon/kronos.jpg");
+    background-image: url("https://cdn.assistantapps.com/icon/forest.jpg");
   }
   70% {
     opacity: 1;
-    background-image: url("https://cdn.assistantapps.com/icon/kronos.jpg");
+    background-image: url("https://cdn.assistantapps.com/icon/forest.jpg");
   }
   75% {
     opacity: 0;
-    background-image: url("https://cdn.assistantapps.com/icon/kronos.jpg");
+    background-image: url("https://cdn.assistantapps.com/icon/forest.jpg");
   }
   76% {
     opacity: 0;
-    background-image: url("https://cdn.assistantapps.com/icon/forest.jpg");
+    background-image: url("https://cdn.assistantapps.com/icon/kronos.jpg");
   }
   81% {
     opacity: 1;
-    background-image: url("https://cdn.assistantapps.com/icon/forest.jpg");
+    background-image: url("https://cdn.assistantapps.com/icon/kronos.jpg");
   }
   95% {
     opacity: 1;
-    background-image: url("https://cdn.assistantapps.com/icon/forest.jpg");
+    background-image: url("https://cdn.assistantapps.com/icon/kronos.jpg");
   }
   100% {
     opacity: 0;
-    background-image: url("https://cdn.assistantapps.com/icon/forest.jpg");
+    background-image: url("https://cdn.assistantapps.com/icon/kronos.jpg");
   }
 }
 .apps-left-screenshot-slider {
@@ -2767,35 +2749,35 @@ body.is-preload #page-wrapper #banner .star-parallax {
   }
   51% {
     opacity: 0;
-    background-image: url("/assets/img/screenshot-assistantKGZ1.png");
+    background-image: url("/assets/img/screenshot-assistantFOR1.png");
   }
   56% {
     opacity: 1;
-    background-image: url("/assets/img/screenshot-assistantKGZ1.png");
+    background-image: url("/assets/img/screenshot-assistantFOR1.png");
   }
   70% {
     opacity: 1;
-    background-image: url("/assets/img/screenshot-assistantKGZ1.png");
+    background-image: url("/assets/img/screenshot-assistantFOR1.png");
   }
   75% {
     opacity: 0;
-    background-image: url("/assets/img/screenshot-assistantKGZ1.png");
+    background-image: url("/assets/img/screenshot-assistantFOR1.png");
   }
   76% {
     opacity: 0;
-    background-image: url("/assets/img/screenshot-assistantFOR1.png");
+    background-image: url("/assets/img/screenshot-assistantKGZ1.png");
   }
   81% {
     opacity: 1;
-    background-image: url("/assets/img/screenshot-assistantFOR1.png");
+    background-image: url("/assets/img/screenshot-assistantKGZ1.png");
   }
   95% {
     opacity: 1;
-    background-image: url("/assets/img/screenshot-assistantFOR1.png");
+    background-image: url("/assets/img/screenshot-assistantKGZ1.png");
   }
   100% {
     opacity: 0;
-    background-image: url("/assets/img/screenshot-assistantFOR1.png");
+    background-image: url("/assets/img/screenshot-assistantKGZ1.png");
   }
 }
 .apps-right-screenshot-slider {
@@ -2839,35 +2821,35 @@ body.is-preload #page-wrapper #banner .star-parallax {
   }
   51% {
     opacity: 0;
-    background-image: url("/assets/img/screenshot-assistantKGZ2.png");
+    background-image: url("/assets/img/screenshot-assistantFOR2.png");
   }
   56% {
     opacity: 1;
-    background-image: url("/assets/img/screenshot-assistantKGZ2.png");
+    background-image: url("/assets/img/screenshot-assistantFOR2.png");
   }
   70% {
     opacity: 1;
-    background-image: url("/assets/img/screenshot-assistantKGZ2.png");
+    background-image: url("/assets/img/screenshot-assistantFOR2.png");
   }
   75% {
     opacity: 0;
-    background-image: url("/assets/img/screenshot-assistantKGZ2.png");
+    background-image: url("/assets/img/screenshot-assistantFOR2.png");
   }
   76% {
     opacity: 0;
-    background-image: url("/assets/img/screenshot-assistantFOR2.png");
+    background-image: url("/assets/img/screenshot-assistantKGZ2.png");
   }
   81% {
     opacity: 1;
-    background-image: url("/assets/img/screenshot-assistantFOR2.png");
+    background-image: url("/assets/img/screenshot-assistantKGZ2.png");
   }
   95% {
     opacity: 1;
-    background-image: url("/assets/img/screenshot-assistantFOR2.png");
+    background-image: url("/assets/img/screenshot-assistantKGZ2.png");
   }
   100% {
     opacity: 0;
-    background-image: url("/assets/img/screenshot-assistantFOR2.png");
+    background-image: url("/assets/img/screenshot-assistantKGZ2.png");
   }
 }
 body.is-preload .screenshot-stack .apps-screenshot {
@@ -2977,10 +2959,6 @@ body.is-preload .screenshot-stack .apps-screenshot {
     top: 2px;
     left: 4px;
     width: 102%;
-  }
-  body #page-wrapper #banner .inner > .row .banner-screenshot-stack .screenshot-stack img.screenshotLeft,
-  .app-specific #page-wrapper #banner .inner > .row .banner-screenshot-stack .screenshot-stack img.screenshotLeft {
-    height: unset;
   }
   body #page-wrapper #banner .inner > .row .banner-screenshot-stack .screenshot-stack img.screenshotRight,
   .app-specific #page-wrapper #banner .inner > .row .banner-screenshot-stack .screenshot-stack img.screenshotRight {
@@ -3680,6 +3658,11 @@ body.app-specific #page-wrapper #banner .store .sublinks {
   gap: 1em;
   margin-top: 0.5em;
 }
+@supports (-moz-appearance: none) {
+  body.app-specific #page-wrapper #banner .store .sublinks {
+    max-width: 40vw;
+  }
+}
 body.app-specific #page-wrapper #banner .store .sublinks .store-icon {
   display: flex;
   flex-direction: row;
@@ -3727,6 +3710,10 @@ body.app-specific #page-wrapper #banner .banner-screenshot-stack .scroll-down-ar
   body #page-wrapper #banner .inner .banner-screenshot-stack,
   body.app-specific #page-wrapper #banner .inner .banner-screenshot-stack {
     padding-left: 5em;
+  }
+  body #page-wrapper #banner .store .sublinks,
+  body.app-specific #page-wrapper #banner .store .sublinks {
+    max-width: unset;
   }
 }
 @media screen and (max-width: 980px) {
