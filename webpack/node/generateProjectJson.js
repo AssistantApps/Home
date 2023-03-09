@@ -10,9 +10,11 @@ async function generateFullJson() {
 
     const siteDataContents = await readFile('./webpack/data/site.json', 'utf8');
     const liveDataContents = await readFile('./webpack/data/live.json', 'utf8');
+    const appsDataContents = await readFile('./webpack/data/apps.json', 'utf8');
 
     const siteData = JSON.parse(siteDataContents);
     const liveData = JSON.parse(liveDataContents);
+    const appsData = JSON.parse(appsDataContents);
 
     const cspContents = await readFile('./webpack/data/csp.json', 'utf8');
     const cspContent = JSON.parse(cspContents);
@@ -35,6 +37,7 @@ async function generateFullJson() {
     const siteDataFull = {
         ...siteData,
         ...liveData,
+        assistantApps: appsData,
         headers: [
             ...cspContent.headers.map(csp => ({ "name": csp, "value": headerString })),
             ...siteData.headers,

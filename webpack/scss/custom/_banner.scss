@@ -20,26 +20,26 @@
                 opacity: 0;
             }
 
-            @media (hover: hover) {
-                &:hover {
-                    .animation-paused-icon {
-                        top: -3em;
-                        opacity: 0.5;
-                    }
-                    .apps-start-word-slider:after {
-                        animation-play-state: paused;
-                    }
-                    .apps-end-word-slider:after {
-                        animation-play-state: paused;
-                    }
-                    .apps-left-screenshot-slider {
-                        animation-play-state: paused;
-                    }
-                    .apps-right-screenshot-slider {
-                        animation-play-state: paused;
-                    }
-                }
-            }
+            // @media (hover: hover) {
+            //     &:hover {
+            //         .animation-paused-icon {
+            //             top: -3em;
+            //             opacity: 0.5;
+            //         }
+            //         .apps-start-word-slider:after {
+            //             animation-play-state: paused;
+            //         }
+            //         .apps-end-word-slider:after {
+            //             animation-play-state: paused;
+            //         }
+            //         .apps-left-screenshot-slider {
+            //             animation-play-state: paused;
+            //         }
+            //         .apps-right-screenshot-slider {
+            //             animation-play-state: paused;
+            //         }
+            //     }
+            // }
         }
     }
 

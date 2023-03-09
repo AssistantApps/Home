@@ -155,6 +155,10 @@ body.app-specific {
                 gap: 1em;
                 margin-top: 0.5em;
 
+                @supports (-moz-appearance: none) {
+                    max-width: 40vw;
+                }
+
                 .store-icon {
                     display: flex;
                     flex-direction: row;
