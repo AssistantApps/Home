@@ -16,6 +16,20 @@ async function generateFullJson() {
     const liveData = JSON.parse(liveDataContents);
     const appsData = JSON.parse(appsDataContents);
 
+    const comingSoonApp = {
+        shortCode: "coming",
+        hiddenOnMenu: true,
+        game: "Coming Soon",
+        title: "Assistant for Unknown",
+        titleStart: "Coming Soon",
+        titleEnd: "",
+        link: "#",
+        image: "/assets/img/Unknown.webp",
+        icon: "/assets/img/Unknown.webp",
+        description: "Yet another Assistant app is under development. Can you guess what game it will be about? Let us know what you think we are working on 😁",
+        links: []
+    }
+
     const cspContents = await readFile('./webpack/data/csp.json', 'utf8');
     const cspContent = JSON.parse(cspContents);
 
@@ -37,7 +51,7 @@ async function generateFullJson() {
     const siteDataFull = {
         ...siteData,
         ...liveData,
-        assistantApps: appsData,
+        assistantApps: [...appsData, comingSoonApp],
         headers: [
             ...cspContent.headers.map(csp => ({ "name": csp, "value": headerString })),
             ...siteData.headers,
