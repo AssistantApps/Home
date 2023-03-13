@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    {{> components/documentHead documentTitle="Support"}}
+    {{> components/documentHead documentTitle="About"}}
 
 </head>
 
@@ -36,37 +36,18 @@
             </label>
         </header>
 
-        <section class="section alternative">
-            <div class="container-1180px ta-center noselect">
-                <h2>Patreon</h2>
-                <h3 style="font-weight: 100;">Special thank you to these amazing people 💖</h3>
+        <section id="wrapper-work" class="wrapper primary-colour">
+            <div class="inner">
+                <h2>Meet the team 👥</h2>
                 <br />
-                <assistant-apps-patreon-list>
-                    <div style="text-align: center;">
+                <assistant-apps-team-list>
+                    <div slot="loading" style="text-align: center;">
                         <img src="/assets/img/loader.svg" height="100px" draggable="false" alt="loading-animation">
                     </div>
-                </assistant-apps-patreon-list>
+                </assistant-apps-team-list>
+                <br /><br /><br />
             </div>
         </section>
-
-        <section class="section thank-you">
-            <div class="container-1180px">
-                <h2 class="ta-center noselect">Team members</h2>
-                <div class="container-600px ta-center noselect">
-                    <h3 style="font-weight: 100;">Meet the team!</h3>
-                </div>
-                <br />
-                <br />
-                <div class="max-w-500px" style="margin: 0 auto">
-                    <assistant-apps-team-list>
-                        <div style="text-align: center;">
-                            <img src="/assets/img/loader.svg" height="100px" draggable="false" alt="loading-animation">
-                        </div>
-                    </assistant-apps-team-list>
-                </div>
-            </div>
-        </section>
-
 
         <hr />
 
@@ -74,7 +55,7 @@
 
     </div>
 
-    {{> components/scripts parallax="true" hcaptcha="true" }}
+    {{> components/scripts webComponent="true" }}
 </body>
 
 </html>

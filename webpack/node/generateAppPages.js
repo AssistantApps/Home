@@ -34,7 +34,7 @@ async function generateOtherFiles() {
     Handlebars.registerPartial('components/scripts', require('../handlebar/components/scripts.hbs'));
 
     for (const assApp of projectData.assistantApps) {
-        if (assApp.shortCodeAlt == null || assApp.shortCode.length < 2) continue;
+        if (assApp.shortCode == null || assApp.shortCode.length < 2) continue;
         await createAppPageFromData(projectData, assApp, assApp.shortCode);
 
         if (assApp.shortCodeAlt == null || assApp.shortCodeAlt.length < 2) continue;

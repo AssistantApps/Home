@@ -2,6 +2,7 @@
     --primary-text-colour: #{_palette(primary)};
 
     --assistantapps-font-family: "Raleway", sans-serif;
+    --assistantapps-team-member-link-text-colour: var(--primary-text-colour);
 }
 
 body::-webkit-scrollbar-track {

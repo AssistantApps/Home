@@ -17,7 +17,6 @@ async function generateFullJson() {
     const appsData = JSON.parse(appsDataContents);
 
     const comingSoonApp = {
-        shortCode: "coming",
         hiddenOnMenu: true,
         game: "Coming Soon",
         title: "Assistant for Unknown",
