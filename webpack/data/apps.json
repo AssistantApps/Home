@@ -53,6 +53,44 @@
         ]
     },
     {
+        "shortCode": "for",
+        "shortCodeAlt": "forest",
+        "game": "The Forest",
+        "title": "Companion of the Forest",
+        "titleStart": "Assistant for",
+        "titleEnd": "The Forest",
+        "link": "https://theforestmap.app",
+        "image": "https://cdn.assistantapps.com/forest.png",
+        "icon": "https://cdn.assistantapps.com/icon/forest.jpg",
+        "screenshotLeft": "/assets/img/screenshot-assistantFOR1.png",
+        "screenshotRight": "/assets/img/screenshot-assistantFOR2.png",
+        "description": "Do you play The Forest? Tired of searching for item locations while playing? Companion of the Forest is an interactive Forest Map that shows you where items in the game are. Whether you're a new or returning player, this app's got you covered with locations of items from the original Forest and it's sequel, Sons of the Forest!",
+        "documentation": "https://docs.assistantapps.com/#/apps/for-main",
+        "customPrimaryColour": "#CAB735",
+        "links": [
+            {
+                "title": "Apple App Store",
+                "icon": "apple",
+                "url": "https://apps.apple.com/us/app/companion-of-the-forest/id1576018666"
+            },
+            {
+                "title": "Google Play Store",
+                "icon": "googlePlay",
+                "url": "https://play.google.com/store/apps/details?id=companion.sotf"
+            },
+            {
+                "title": "Web",
+                "icon": "webapp",
+                "url": "https://app.theforestmap.app/"
+            },
+            {
+                "title": "Homepage",
+                "icon": "web",
+                "url": "https://theforestmap.app"
+            }
+        ]
+    },
+    {
         "shortCode": "sms",
         "game": "Scrap Mechanic",
         "title": "Assistant for Scrap Mechanic",
@@ -86,43 +124,6 @@
                 "title": "Github organisation",
                 "icon": "github",
                 "url": "https://github.com/AssistantSMS"
-            }
-        ]
-    },
-    {
-        "shortCode": "for",
-        "game": "The Forest",
-        "title": "Companion of the Forest",
-        "titleStart": "Assistant for",
-        "titleEnd": "The Forest",
-        "link": "https://theforestmap.app",
-        "image": "https://cdn.assistantapps.com/forest.png",
-        "icon": "https://cdn.assistantapps.com/icon/forest.jpg",
-        "screenshotLeft": "/assets/img/screenshot-assistantFOR1.png",
-        "screenshotRight": "/assets/img/screenshot-assistantFOR2.png",
-        "description": "Do you play The Forest? Tired of searching for item locations while playing? Companion of the Forest is an interactive Forest Map that shows you where items in the game are. Whether you're a new or returning player, this app's got you covered with locations of items from the original Forest and it's sequel, Sons of the Forest!",
-        "documentation": "https://docs.assistantapps.com/#/apps/for-main",
-        "customPrimaryColour": "#CAB735",
-        "links": [
-            {
-                "title": "Apple App Store",
-                "icon": "apple",
-                "url": "https://apps.apple.com/us/app/companion-of-the-forest/id1576018666"
-            },
-            {
-                "title": "Google Play Store",
-                "icon": "googlePlay",
-                "url": "https://play.google.com/store/apps/details?id=companion.sotf"
-            },
-            {
-                "title": "Web",
-                "icon": "webapp",
-                "url": "https://app.theforestmap.app/"
-            },
-            {
-                "title": "Homepage",
-                "icon": "web",
-                "url": "https://theforestmap.app"
             }
         ]
     },
@@ -180,18 +181,5 @@
                 "url": "https://github.com/AssistantDKM"
             }
         ]
-    },
-    {
-        "shortCode": "coming",
-        "hiddenOnMenu": true,
-        "game": "Coming Soon",
-        "title": "Assistant for Unknown",
-        "titleStart": "Coming Soon",
-        "titleEnd": "",
-        "link": "#",
-        "image": "/assets/img/Unknown.webp",
-        "icon": "/assets/img/Unknown.webp",
-        "description": "Yet another Assistant app is under development. Can you guess what game it will be about? Let us know what you think we are working on 😁",
-        "links": []
     }
 ]

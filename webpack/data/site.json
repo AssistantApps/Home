@@ -105,6 +105,22 @@
             ]
         },
         {
+            "title": "NoMansSky.Social",
+            "image": "./assets/img/noMansSkySocial.png",
+            "link": "https://nomanssky.social",
+            "description": "We created and maintain the NoMansSky.Social Mastodon instance. It has been a great learning experience: setting up the instance, creating bots, customisations and continuous upgrades.",
+            "subLinks": [
+                {
+                    "title": "Homepage",
+                    "url": "https://nomanssky.social"
+                },
+                {
+                    "title": "Emoji website",
+                    "url": "https://emoji.nomanssky.social"
+                }
+            ]
+        },
+        {
             "title": "DevTalk",
             "image": "./assets/img/devtalk.png",
             "link": "https://www.youtube.com/playlist?list=PLIjFqYF1O-TDACR0Kz8h0OXfolRHCiUE5",

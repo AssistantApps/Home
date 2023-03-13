@@ -34,64 +34,11 @@ async function generateOtherFiles() {
     Handlebars.registerPartial('components/scripts', require('../handlebar/components/scripts.hbs'));
 
     for (const assApp of projectData.assistantApps) {
-        if (assApp.shortCode == null || assApp.shortCode.length < 2) continue;
+        if (assApp.shortCodeAlt == null || assApp.shortCode.length < 2) continue;
+        await createAppPageFromData(projectData, assApp, assApp.shortCode);
 
-        const template = await readFile(`./webpack/handlebar/app.hbs`, 'utf8');
-        const templateFunc = Handlebars.compile(template);
-
-        const otherLinks = [];
-        const storeBadges = [];
-        const storeLinksTypes = ['apple', 'googlePlay'];
-        for (const link of assApp.links) {
-            if (storeLinksTypes.includes(link.icon)) {
-                storeBadges.push(link);
-            }
-            else {
-                otherLinks.push(link);
-            }
-        }
-
-        const templateData = {
-            kurt: projectData.kurt,
-            theme: projectData.theme,
-            meta: projectData.meta,
-            rootLinks: projectData.link,
-            twitter: {
-                ...projectData.twitter,
-                ...(assApp.link ?? {})
-            },
-            preconnect: [
-                ...projectData.preconnect,
-                assApp.image,
-            ],
-
-            documentTitle: assApp.name,
-            rootUrl: assApp.link,
-            downloadAppLink: (assApp.downloadAppLink ?? assApp.links?.[0]?.url) ?? assApp.link,
-            storeBadges: storeBadges,
-            otherLinks: otherLinks,
-            backgroundImg: (assApp.customPrimaryColour != null)
-                ? `url(/assets/img/bubble-${assApp.shortCode}.svg)`
-                : `url(/assets/img/bubble.svg)`,
-
-            ...assApp,
-
-            assAppLinks: assApp.links,
-            links: projectData.links,
-        };
-        const compiledTemplate = templateFunc(templateData);
-
-        if (!fs.existsSync(assApp.shortCode)) {
-            fs.mkdirSync(assApp.shortCode);
-        }
-        fs.writeFile(`./${assApp.shortCode}/index.html`, compiledTemplate, ['utf8'], () => { });
-
-        if (assApp.customPrimaryColour != null) {
-            const backgroundTemplate = await readFile(`./webpack/handlebar/bubble.svg.hbs`, 'utf8');
-            const backgroundTemplateFunc = Handlebars.compile(backgroundTemplate);
-            const backgroundCompiledTemplate = backgroundTemplateFunc(templateData);
-            fs.writeFile(`./assets/img/bubble-${assApp.shortCode}.svg`, backgroundCompiledTemplate, ['utf8'], () => { });
-        }
+        if (assApp.shortCodeAlt == null || assApp.shortCodeAlt.length < 2) continue;
+        await createAppPageFromData(projectData, assApp, assApp.shortCodeAlt);
     }
 
     const otherPageTemplateData = {
@@ -122,6 +69,66 @@ async function generateOtherFiles() {
         }
 
         fs.writeFile(`./${redirect.pattern}/index.html`, compiledTemplate, ['utf8'], () => { });
+    }
+}
+
+const createAppPageFromData = async (projectData, assApp, shortCode) => {
+
+    const template = await readFile(`./webpack/handlebar/app.hbs`, 'utf8');
+    const templateFunc = Handlebars.compile(template);
+
+    const otherLinks = [];
+    const storeBadges = [];
+    const storeLinksTypes = ['apple', 'googlePlay'];
+    for (const link of assApp.links) {
+        if (storeLinksTypes.includes(link.icon)) {
+            storeBadges.push(link);
+        }
+        else {
+            otherLinks.push(link);
+        }
+    }
+
+    const templateData = {
+        kurt: projectData.kurt,
+        theme: projectData.theme,
+        meta: projectData.meta,
+        rootLinks: projectData.link,
+        twitter: {
+            ...projectData.twitter,
+            ...(assApp.link ?? {})
+        },
+        preconnect: [
+            ...projectData.preconnect,
+            assApp.image,
+        ],
+
+        documentTitle: assApp.name,
+        rootUrl: assApp.link,
+        downloadAppLink: (assApp.downloadAppLink ?? assApp.links?.[0]?.url) ?? assApp.link,
+        storeBadges: storeBadges,
+        otherLinks: otherLinks,
+        backgroundImg: (assApp.customPrimaryColour != null)
+            ? `url(/assets/img/bubble-${assApp.shortCode}.svg)`
+            : `url(/assets/img/bubble.svg)`,
+
+        ...assApp,
+
+        assAppLinks: assApp.links,
+        links: projectData.links,
+    };
+    const compiledTemplate = templateFunc(templateData);
+
+    if (!fs.existsSync(shortCode)) {
+        fs.mkdirSync(shortCode);
+    }
+    fs.writeFile(`./${shortCode}/index.html`, compiledTemplate, ['utf8'], () => { });
+
+    if (assApp.customPrimaryColour != null) {
+        const backgroundTemplate = await readFile(`./webpack/handlebar/bubble.svg.hbs`, 'utf8');
+        const backgroundTemplateFunc = Handlebars.compile(backgroundTemplate);
+        const backgroundCompiledTemplate = backgroundTemplateFunc(templateData);
+        fs.writeFile(`./assets/img/bubble-${assApp.shortCode}.svg`, backgroundCompiledTemplate, ['utf8'], () => { });
     }
 }
 
