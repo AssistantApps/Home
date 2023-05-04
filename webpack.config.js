@@ -1,6 +1,7 @@
 const path = require('path');
 const HandlebarsPlugin = require("handlebars-webpack-plugin");
 const moveFile = require('move-file');
+const fs = require('fs');
 
 const bundleFileName = 'bundle';
 const dirName = 'dist';
@@ -79,6 +80,18 @@ module.exports = (env, argv) => {
                         (async () => {
                             await moveFile('.htaccess.html', `\.htaccess`);
                             console.log('The htaccess file has been renamed');
+                        })();
+                    }
+                    if (filename.includes('app.html')) {
+                        (async () => {
+                            fs.unlinkSync('app.html');
+                            console.log('The app.html has been removed');
+                        })();
+                    }
+                    if (filename.includes('redirect.html')) {
+                        (async () => {
+                            fs.unlinkSync('redirect.html');
+                            console.log('The redirect.html has been removed');
                         })();
                     }
                 }
