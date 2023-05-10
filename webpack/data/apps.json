@@ -155,13 +155,11 @@
     },
     {
         "shortCode": "dkm",
-        "hiddenOnMenu": true,
-        "hiddenOnFrontPage": true,
         "game": "Dinkum",
         "title": "Assistant for Dinkum",
         "titleStart": "Assistant for",
         "titleEnd": "Dinkum",
-        "link": "https://dinkum.assistantapps.com",
+        "link": "https://assistantapps.com/dkm",
         "image": "https://cdn.assistantapps.com/assistantDKM.png",
         "icon": "https://cdn.assistantapps.com/icon/assistantDKM.png",
         "screenshotLeft": "/assets/img/screenshot-assistantDKM1.png",
@@ -170,6 +168,11 @@
         "documentation": "https://docs.assistantapps.com/#/apps/dkm-main",
         "customPrimaryColour": "#8B432B",
         "links": [
+            {
+                "title": "Google Play Store",
+                "icon": "googlePlay",
+                "url": "https://play.google.com/store/apps/details?id=com.assistantapps.assistant_dinkum_app"
+            },
             {
                 "title": "Web",
                 "icon": "webapp",
