@@ -2481,13 +2481,13 @@ body.is-preload #page-wrapper #banner .star-parallax {
 
 .apps-start-word-slider::after {
   content: "Assistant for ";
-  animation: appsWordSliderStartText 12s infinite;
+  animation: appsWordSliderStartText 15s infinite;
   overflow: hidden;
 }
 
 .apps-end-word-slider::after {
   content: "everything!";
-  animation: appsWordSliderEndText 12s infinite;
+  animation: appsWordSliderEndText 15s infinite;
   overflow: hidden;
 }
 
@@ -2506,61 +2506,77 @@ body.is-preload #page-wrapper #banner .star-parallax {
     opacity: 1;
     content: "Assistant for";
   }
-  20% {
+  15% {
     opacity: 1;
     content: "Assistant for";
   }
-  25% {
+  20% {
+    opacity: 0;
+    content: "Assistant for";
+  }
+  21% {
     opacity: 0;
     content: "Assistant for";
   }
   26% {
+    opacity: 1;
+    content: "Assistant for";
+  }
+  35% {
+    opacity: 1;
+    content: "Assistant for";
+  }
+  40% {
     opacity: 0;
     content: "Assistant for";
   }
-  31% {
-    opacity: 1;
-    content: "Assistant for";
-  }
-  45% {
-    opacity: 1;
-    content: "Assistant for";
-  }
-  50% {
+  41% {
     opacity: 0;
     content: "Assistant for";
   }
-  51% {
+  46% {
+    opacity: 1;
+    content: "Assistant for";
+  }
+  55% {
+    opacity: 1;
+    content: "Assistant for";
+  }
+  60% {
     opacity: 0;
     content: "Assistant for";
   }
-  56% {
-    opacity: 1;
-    content: "Assistant for";
+  61% {
+    opacity: 0;
+    content: "Kronos:";
   }
-  70% {
+  66% {
     opacity: 1;
-    content: "Assistant for";
+    content: "Kronos:";
   }
   75% {
-    opacity: 0;
-    content: "Assistant for";
+    opacity: 1;
+    content: "Kronos:";
   }
-  76% {
+  80% {
     opacity: 0;
     content: "Kronos:";
   }
   81% {
+    opacity: 0;
+    content: "Assistant for";
+  }
+  86% {
     opacity: 1;
-    content: "Kronos:";
+    content: "Assistant for";
   }
   95% {
     opacity: 1;
-    content: "Kronos:";
+    content: "Assistant for";
   }
   100% {
     opacity: 0;
-    content: "Kronos:";
+    content: "Assistant for";
   }
 }
 @keyframes appsWordSliderEndText {
@@ -2572,61 +2588,77 @@ body.is-preload #page-wrapper #banner .star-parallax {
     opacity: 1;
     content: "No Man's Sky";
   }
-  20% {
+  15% {
     opacity: 1;
     content: "No Man's Sky";
   }
-  25% {
+  20% {
     opacity: 0;
     content: "No Man's Sky";
+  }
+  21% {
+    opacity: 0;
+    content: "The Forest";
   }
   26% {
+    opacity: 1;
+    content: "The Forest";
+  }
+  35% {
+    opacity: 1;
+    content: "The Forest";
+  }
+  40% {
     opacity: 0;
     content: "The Forest";
   }
-  31% {
-    opacity: 1;
-    content: "The Forest";
-  }
-  45% {
-    opacity: 1;
-    content: "The Forest";
-  }
-  50% {
-    opacity: 0;
-    content: "The Forest";
-  }
-  51% {
+  41% {
     opacity: 0;
     content: "Scrap Mechanic";
   }
-  56% {
+  46% {
     opacity: 1;
     content: "Scrap Mechanic";
   }
-  70% {
+  55% {
     opacity: 1;
     content: "Scrap Mechanic";
+  }
+  60% {
+    opacity: 0;
+    content: "Scrap Mechanic";
+  }
+  61% {
+    opacity: 0;
+    content: "Guides for Zombies";
+  }
+  66% {
+    opacity: 1;
+    content: "Guides for Zombies";
   }
   75% {
-    opacity: 0;
-    content: "Scrap Mechanic";
+    opacity: 1;
+    content: "Guides for Zombies";
   }
-  76% {
+  80% {
     opacity: 0;
     content: "Guides for Zombies";
   }
   81% {
+    opacity: 0;
+    content: "Dinkum";
+  }
+  86% {
     opacity: 1;
-    content: "Guides for Zombies";
+    content: "Dinkum";
   }
   95% {
     opacity: 1;
-    content: "Guides for Zombies";
+    content: "Dinkum";
   }
   100% {
     opacity: 0;
-    content: "Guides for Zombies";
+    content: "Dinkum";
   }
 }
 .apps-image-slider {
@@ -2634,7 +2666,7 @@ body.is-preload #page-wrapper #banner .star-parallax {
   height: 50px;
   background-image: url("https://cdn.assistantapps.com/icon/assistantNMS.webp");
   background-repeat: round;
-  animation: appsImageSliderText 12s infinite;
+  animation: appsImageSliderText 15s infinite;
   border-radius: 5px;
 }
 @media screen and (max-width: 736px) {
@@ -2652,66 +2684,82 @@ body.is-preload #page-wrapper #banner .star-parallax {
     opacity: 1;
     background-image: url("https://cdn.assistantapps.com/icon/assistantNMS.webp");
   }
-  20% {
+  15% {
     opacity: 1;
     background-image: url("https://cdn.assistantapps.com/icon/assistantNMS.webp");
   }
-  25% {
+  20% {
     opacity: 0;
     background-image: url("https://cdn.assistantapps.com/icon/assistantNMS.webp");
+  }
+  21% {
+    opacity: 0;
+    background-image: url("https://cdn.assistantapps.com/icon/forest.jpg");
   }
   26% {
+    opacity: 1;
+    background-image: url("https://cdn.assistantapps.com/icon/forest.jpg");
+  }
+  35% {
+    opacity: 1;
+    background-image: url("https://cdn.assistantapps.com/icon/forest.jpg");
+  }
+  40% {
     opacity: 0;
     background-image: url("https://cdn.assistantapps.com/icon/forest.jpg");
   }
-  31% {
-    opacity: 1;
-    background-image: url("https://cdn.assistantapps.com/icon/forest.jpg");
-  }
-  45% {
-    opacity: 1;
-    background-image: url("https://cdn.assistantapps.com/icon/forest.jpg");
-  }
-  50% {
-    opacity: 0;
-    background-image: url("https://cdn.assistantapps.com/icon/forest.jpg");
-  }
-  51% {
+  41% {
     opacity: 0;
     background-image: url("https://cdn.assistantapps.com/icon/assistantSMS.webp");
   }
-  56% {
+  46% {
     opacity: 1;
     background-image: url("https://cdn.assistantapps.com/icon/assistantSMS.webp");
   }
-  70% {
+  55% {
     opacity: 1;
     background-image: url("https://cdn.assistantapps.com/icon/assistantSMS.webp");
+  }
+  60% {
+    opacity: 0;
+    background-image: url("https://cdn.assistantapps.com/icon/assistantSMS.webp");
+  }
+  61% {
+    opacity: 0;
+    background-image: url("https://cdn.assistantapps.com/icon/kronos.jpg");
+  }
+  66% {
+    opacity: 1;
+    background-image: url("https://cdn.assistantapps.com/icon/kronos.jpg");
   }
   75% {
-    opacity: 0;
-    background-image: url("https://cdn.assistantapps.com/icon/assistantSMS.webp");
+    opacity: 1;
+    background-image: url("https://cdn.assistantapps.com/icon/kronos.jpg");
   }
-  76% {
+  80% {
     opacity: 0;
     background-image: url("https://cdn.assistantapps.com/icon/kronos.jpg");
   }
   81% {
+    opacity: 0;
+    background-image: url("https://cdn.assistantapps.com/icon/assistantDKM.png");
+  }
+  86% {
     opacity: 1;
-    background-image: url("https://cdn.assistantapps.com/icon/kronos.jpg");
+    background-image: url("https://cdn.assistantapps.com/icon/assistantDKM.png");
   }
   95% {
     opacity: 1;
-    background-image: url("https://cdn.assistantapps.com/icon/kronos.jpg");
+    background-image: url("https://cdn.assistantapps.com/icon/assistantDKM.png");
   }
   100% {
     opacity: 0;
-    background-image: url("https://cdn.assistantapps.com/icon/kronos.jpg");
+    background-image: url("https://cdn.assistantapps.com/icon/assistantDKM.png");
   }
 }
 .apps-left-screenshot-slider {
   background-image: url("https://cdn.assistantapps.com/icon/assistantNMS.webp");
-  animation: appsLeftScreensAnim 12s infinite;
+  animation: appsLeftScreensAnim 15s infinite;
   border-radius: 5px;
 }
 
@@ -2724,66 +2772,82 @@ body.is-preload #page-wrapper #banner .star-parallax {
     opacity: 1;
     background-image: url("/assets/img/screenshot-assistantNMS1.png");
   }
-  20% {
+  15% {
     opacity: 1;
     background-image: url("/assets/img/screenshot-assistantNMS1.png");
   }
-  25% {
+  20% {
     opacity: 0;
     background-image: url("/assets/img/screenshot-assistantNMS1.png");
+  }
+  21% {
+    opacity: 0;
+    background-image: url("/assets/img/screenshot-assistantFOR1.png");
   }
   26% {
+    opacity: 1;
+    background-image: url("/assets/img/screenshot-assistantFOR1.png");
+  }
+  35% {
+    opacity: 1;
+    background-image: url("/assets/img/screenshot-assistantFOR1.png");
+  }
+  40% {
     opacity: 0;
     background-image: url("/assets/img/screenshot-assistantFOR1.png");
   }
-  31% {
-    opacity: 1;
-    background-image: url("/assets/img/screenshot-assistantFOR1.png");
-  }
-  45% {
-    opacity: 1;
-    background-image: url("/assets/img/screenshot-assistantFOR1.png");
-  }
-  50% {
-    opacity: 0;
-    background-image: url("/assets/img/screenshot-assistantFOR1.png");
-  }
-  51% {
+  41% {
     opacity: 0;
     background-image: url("/assets/img/screenshot-assistantSMS1.png");
   }
-  56% {
+  46% {
     opacity: 1;
     background-image: url("/assets/img/screenshot-assistantSMS1.png");
   }
-  70% {
+  55% {
     opacity: 1;
     background-image: url("/assets/img/screenshot-assistantSMS1.png");
+  }
+  60% {
+    opacity: 0;
+    background-image: url("/assets/img/screenshot-assistantSMS1.png");
+  }
+  61% {
+    opacity: 0;
+    background-image: url("/assets/img/screenshot-assistantKGZ1.png");
+  }
+  66% {
+    opacity: 1;
+    background-image: url("/assets/img/screenshot-assistantKGZ1.png");
   }
   75% {
-    opacity: 0;
-    background-image: url("/assets/img/screenshot-assistantSMS1.png");
+    opacity: 1;
+    background-image: url("/assets/img/screenshot-assistantKGZ1.png");
   }
-  76% {
+  80% {
     opacity: 0;
     background-image: url("/assets/img/screenshot-assistantKGZ1.png");
   }
   81% {
+    opacity: 0;
+    background-image: url("/assets/img/screenshot-assistantDKM1.png");
+  }
+  86% {
     opacity: 1;
-    background-image: url("/assets/img/screenshot-assistantKGZ1.png");
+    background-image: url("/assets/img/screenshot-assistantDKM1.png");
   }
   95% {
     opacity: 1;
-    background-image: url("/assets/img/screenshot-assistantKGZ1.png");
+    background-image: url("/assets/img/screenshot-assistantDKM1.png");
   }
   100% {
     opacity: 0;
-    background-image: url("/assets/img/screenshot-assistantKGZ1.png");
+    background-image: url("/assets/img/screenshot-assistantDKM1.png");
   }
 }
 .apps-right-screenshot-slider {
   background-image: url("https://cdn.assistantapps.com/icon/assistantNMS.webp");
-  animation: appsRightScreensAnim 12s infinite;
+  animation: appsRightScreensAnim 15s infinite;
   border-radius: 5px;
 }
 
@@ -2796,61 +2860,77 @@ body.is-preload #page-wrapper #banner .star-parallax {
     opacity: 1;
     background-image: url("/assets/img/screenshot-assistantNMS2.png");
   }
-  20% {
+  15% {
     opacity: 1;
     background-image: url("/assets/img/screenshot-assistantNMS2.png");
   }
-  25% {
+  20% {
     opacity: 0;
     background-image: url("/assets/img/screenshot-assistantNMS2.png");
+  }
+  21% {
+    opacity: 0;
+    background-image: url("/assets/img/screenshot-assistantFOR2.png");
   }
   26% {
+    opacity: 1;
+    background-image: url("/assets/img/screenshot-assistantFOR2.png");
+  }
+  35% {
+    opacity: 1;
+    background-image: url("/assets/img/screenshot-assistantFOR2.png");
+  }
+  40% {
     opacity: 0;
     background-image: url("/assets/img/screenshot-assistantFOR2.png");
   }
-  31% {
-    opacity: 1;
-    background-image: url("/assets/img/screenshot-assistantFOR2.png");
-  }
-  45% {
-    opacity: 1;
-    background-image: url("/assets/img/screenshot-assistantFOR2.png");
-  }
-  50% {
-    opacity: 0;
-    background-image: url("/assets/img/screenshot-assistantFOR2.png");
-  }
-  51% {
+  41% {
     opacity: 0;
     background-image: url("/assets/img/screenshot-assistantSMS2.png");
   }
-  56% {
+  46% {
     opacity: 1;
     background-image: url("/assets/img/screenshot-assistantSMS2.png");
   }
-  70% {
+  55% {
     opacity: 1;
     background-image: url("/assets/img/screenshot-assistantSMS2.png");
+  }
+  60% {
+    opacity: 0;
+    background-image: url("/assets/img/screenshot-assistantSMS2.png");
+  }
+  61% {
+    opacity: 0;
+    background-image: url("/assets/img/screenshot-assistantKGZ2.png");
+  }
+  66% {
+    opacity: 1;
+    background-image: url("/assets/img/screenshot-assistantKGZ2.png");
   }
   75% {
-    opacity: 0;
-    background-image: url("/assets/img/screenshot-assistantSMS2.png");
+    opacity: 1;
+    background-image: url("/assets/img/screenshot-assistantKGZ2.png");
   }
-  76% {
+  80% {
     opacity: 0;
     background-image: url("/assets/img/screenshot-assistantKGZ2.png");
   }
   81% {
+    opacity: 0;
+    background-image: url("/assets/img/screenshot-assistantDKM2.png");
+  }
+  86% {
     opacity: 1;
-    background-image: url("/assets/img/screenshot-assistantKGZ2.png");
+    background-image: url("/assets/img/screenshot-assistantDKM2.png");
   }
   95% {
     opacity: 1;
-    background-image: url("/assets/img/screenshot-assistantKGZ2.png");
+    background-image: url("/assets/img/screenshot-assistantDKM2.png");
   }
   100% {
     opacity: 0;
-    background-image: url("/assets/img/screenshot-assistantKGZ2.png");
+    background-image: url("/assets/img/screenshot-assistantDKM2.png");
   }
 }
 body.is-preload .screenshot-stack .apps-screenshot {
