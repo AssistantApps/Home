@@ -27,8 +27,10 @@ async function generateOtherFiles() {
     Handlebars.registerHelper('urlrefescaped', urlrefescapedHelper);
     Handlebars.registerHelper('cssvar', cssvarHelper);
 
-
     Handlebars.registerPartial('components/documentHead', require('../handlebar/components/documentHead.hbs'));
+    Handlebars.registerPartial('components/appSection', require('../handlebar/components/appSection.hbs'));
+    Handlebars.registerPartial('components/appFeature', require('../handlebar/components/appFeature.hbs'));
+    Handlebars.registerPartial('components/toolSection', require('../handlebar/components/toolSection.hbs'));
     Handlebars.registerPartial('components/banner', require('../handlebar/components/banner.hbs'));
     Handlebars.registerPartial('components/footer', require('../handlebar/components/footer.hbs'));
     Handlebars.registerPartial('components/scripts', require('../handlebar/components/scripts.hbs'));
@@ -49,11 +51,24 @@ async function generateOtherFiles() {
         'support.hbs',
     ];
     for (const otherTemplate of otherTemplates) {
-        const otherTemplateContent = await readFile(`./webpack/handlebar/${otherTemplate}`, 'utf8');
-        const otherTemplateFunc = Handlebars.compile(otherTemplateContent);
-        const otherTemplateCompiled = otherTemplateFunc(otherPageTemplateData);
-        fs.writeFile(`./${otherTemplate.replace('.hbs', '.html')}`, otherTemplateCompiled, ['utf8'], () => { });
+        createOtherTemplate(
+            otherTemplate,
+            otherTemplate.replace('.hbs', '.html'),
+            otherPageTemplateData
+        );
     }
+
+    createOtherTemplate('patreonLogin.hbs', 'patreonLoginFailure.html', {
+        ...otherPageTemplateData,
+        loginTitle: 'Something went wrong 😞',
+        loginMessage: 'Either the <b>AssistantApps</b> servers or the <b>Patreon</b> servers are misbehaving.',
+        showSupport: 'true',
+    });
+    createOtherTemplate('patreonLogin.hbs', 'patreonLoginSuccess.html', {
+        ...otherPageTemplateData,
+        loginTitle: 'Patreon login successful 👍',
+        loginMessage: 'You can close this window, everything worked perfectly! 🎉',
+    });
 
     for (const redirect of projectData.redirects) {
         const template = await readFile(`./webpack/handlebar/redirect.hbs`, 'utf8');
@@ -70,6 +85,13 @@ async function generateOtherFiles() {
 
         fs.writeFile(`./${redirect.pattern}/index.html`, compiledTemplate, ['utf8'], () => { });
     }
+}
+
+const createOtherTemplate = async (inputTemplateFile, outputFileName, otherPageTemplateData) => {
+    const templContent = await readFile(`./webpack/handlebar/${inputTemplateFile}`, 'utf8');
+    const templFunc = Handlebars.compile(templContent);
+    const templCompiled = templFunc(otherPageTemplateData);
+    fs.writeFile(`./${outputFileName}`, templCompiled, ['utf8'], () => { });
 }
 
 const createAppPageFromData = async (projectData, assApp, shortCode) => {

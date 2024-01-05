@@ -22,6 +22,7 @@ $storeIconSize: 35px;
 
 #wrapper-work {
     text-align: center;
+
     p {
         color: #b0b0b0;
     }
@@ -37,97 +38,97 @@ $storeIconSize: 35px;
         grid-template-columns: 1fr 1fr;
         column-gap: 1em;
         row-gap: 3em;
+    }
 
-        .wrapper.spotlight .inner {
-            display: flex;
+    .wrapper.spotlight .inner {
+        display: flex;
 
-            a.image {
-                max-width: $appIconSize;
-                max-height: $appIconSize;
-                text-decoration: none;
-                border: none;
+        a.image {
+            max-width: $appIconSize;
+            max-height: $appIconSize;
+            text-decoration: none;
+            border: none;
+        }
 
-                img {
-                    max-width: 100%;
-                    border-radius: 15%;
+
+        a.image img,
+        img {
+            max-width: 100%;
+            border-radius: 15%;
+        }
+
+        .content {
+            color: #b0b0b0;
+            font-size: 0.75em;
+            margin-left: 1.5em;
+            margin-right: 1.5em;
+
+            h2 {
+                font-size: 1.75em;
+                margin-bottom: 0;
+
+                .font-weight-heavy {
+                    color: var(--primary-text-colour);
                 }
             }
 
-            .content {
-                color: #b0b0b0;
-                font-size: 0.75em;
-                margin-left: 1.5em;
-                margin-right: 1.5em;
-
-                h2 {
-                    font-size: 1.75em;
-                    margin-bottom: 0;
-
-                    .font-weight-heavy {
-                        color: var(--primary-text-colour);
-                    }
-                }
-
-                p {
-                    display: -webkit-box;
-                    -webkit-line-clamp: 4;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
-                    transition: all 1s ease-in-out;
-                }
+            p {
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                transition: all 1s ease-in-out;
             }
         }
+    }
 
-        .work-card,
-        .inner {
-            border-radius: 25px;
-        }
+    .work-card,
+    .inner {
+        border-radius: 25px;
+    }
 
-        .work-card {
-            background: linear-gradient(
-                180deg,
+    .work-card {
+        background: linear-gradient(180deg,
                 rgba(255, 255, 255, 1) 0%,
                 rgba(44, 182, 115, 1) 29%,
-                rgba(34, 45, 46, 1) 100%
-            );
+                rgba(34, 45, 46, 1) 100%);
 
-            .inner {
+        .inner {
+            display: flex;
+            flex-direction: column;
+            margin: 1px;
+            padding: 1em 2em;
+            text-align: center;
+            background-color: _palette(bg);
+
+            a,
+            a.image {
+                text-decoration: none;
+                border: none;
+            }
+
+            .image,
+            .image img {
+                width: auto;
+                height: #{$appIconSize * 2};
+                margin: 0 auto 0.5em auto;
+                border-radius: 25px;
+            }
+
+            p {
+                color: #b0b0b0;
+                font-size: 0.75em;
+            }
+
+            .sublinks {
                 display: flex;
-                flex-direction: column;
-                margin: 1px;
-                padding: 1em 2em;
-                text-align: center;
-                background-color: _palette(bg);
+                justify-content: center;
 
-                a,
-                a.image {
-                    text-decoration: none;
-                    border: none;
-                }
-
-                .image,
-                .image img {
-                    width: auto;
-                    height: #{$appIconSize * 2};
-                    margin: 0 auto 0.5em auto;
-                    border-radius: 25px;
-                }
-
-                p {
-                    color: #b0b0b0;
-                    font-size: 0.75em;
-                }
-
-                .sublinks {
-                    display: flex;
-                    justify-content: center;
-
-                    a {
-                        display: inline;
-                        margin: 0 1em;
-                        color: var(--primary-text-colour);
-                        border-bottom: 1px solid var(--primary-text-colour);
-                    }
+                a {
+                    display: inline;
+                    margin: 0 1em;
+                    color: var(--primary-text-colour);
+                    border-bottom: 1px solid var(--primary-text-colour);
                 }
             }
         }

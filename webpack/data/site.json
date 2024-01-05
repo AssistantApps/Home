@@ -19,12 +19,13 @@
     },
     "meta": {
         "appName": "Assistant Apps",
-        "title": "Assistant Apps by Kurt Lourens",
+        "title": "Assistant Apps - Built to help you enjoy your gaming to the fullest",
         "description": "Home page of the Assistant Apps. Get the apps on Google Play, Apple App Store and on the web"
     },
     "subtitle": "Beautiful and fast cross-platform apps built to help you in your favourite games!",
-    "additional": "Assistant work",
-    "additionalDescription": "Working on these projects has opened up opportunities to talk to other community developers, host streams and start organisations all aimed at entertaining and assisting gamers enjoy their games to the fullest!!",
+    "assistantWork": "Assistant work",
+    "assistantWorkDescription": "Working on these projects has opened up opportunities to talk to other community developers, host streams and start organisations all aimed at entertaining and assisting gamers enjoy their games to the fullest!!",
+    "toolDescription": "Here are some tools for you to use, built by us to improve your gaming!",
     "footer": "Get in touch",
     "footerDescription": "Feel free to get in contact with us! we have a Discord server if you would like to talk directly to us. Otherwise you can use the form below and we will get back to you as soon as we can.",
     "twitter": {

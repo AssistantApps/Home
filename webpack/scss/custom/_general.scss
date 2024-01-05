@@ -41,6 +41,7 @@ html {
 }
 
 #page-wrapper>#banner,
+#page-wrapper>#wrapper>.tools,
 #page-wrapper>#wrapper>.features,
 #page-wrapper>#wrapper-work,
 #page-wrapper>#contactus {
@@ -59,8 +60,16 @@ html {
     color: var(--primary-text-colour);
 }
 
+.hidden {
+    display: none !important;
+}
+
 .mb-1 {
     margin-bottom: 1em;
+}
+
+.mb-05 {
+    margin-bottom: 0.5em;
 }
 
 .mb-2 {
