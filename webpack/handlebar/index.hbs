@@ -136,6 +136,29 @@
             </div>
         </section>
 
+        <section id="wrapper">
+            <h2 class="mb-1">Our Small tools</h2>
+
+            <div class="tools">
+                {{#each assistantAppTools}}
+                {{> components/toolSection }}
+                {{/each}}
+            </div>
+        </section>
+
+        <section id="wrapper-work" class="wrapper primary-colour">
+            <div class="inner">
+                <h2>{{additional}}</h2>
+                <p class="mb-2">{{additionalDescription}}</p>
+
+                <div class="features">
+                    {{#each features}}
+                    {{> components/appFeature }}
+                    {{/each}}
+                </div>
+            </div>
+        </section>
+
         <section id="wrapper-work" class="wrapper primary-colour">
             <div class="inner">
                 <h2>{{additional}}</h2>

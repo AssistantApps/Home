@@ -1,0 +1,37 @@
+[
+    {
+        "shortCode": "wcmp",
+        "title": "Web Components",
+        "link": "https://assistantapps.com",
+        "icon": "/assets/img/logo-sm.png",
+        "description": "Reusable Components for web"
+    },
+    {
+        "shortCode": "ldex",
+        "title": "Simple Living Dex",
+        "link": "https://livingdex.assistantapps.com/",
+        "icon": "/assets/img/pkm.png",
+        "description": "Simple Pokémon Living Dex for organising your Pokémon Home"
+    },
+    {
+        "shortCode": "tplnr",
+        "title": "Simple Pokemon Tera Raid planner",
+        "link": "https://pkmtera.assistantapps.com/",
+        "icon": "/assets/img/pkm.png",
+        "description": "Simple Pokemon Tera Raid Info for Pokémon Scarlet & Violet"
+    },
+    {
+        "shortCode": "memed",
+        "title": "MemeDeck",
+        "link": "https://meme-deck.assistantapps.stream/",
+        "icon": "/assets/img/memed.png",
+        "description": "Easily add gifs and images to your stream using this page as an overlay in your streaming software of choice"
+    },
+    {
+        "shortCode": "crzychat",
+        "title": "Crazy Chat Overlay",
+        "link": "https://assistantapps.github.io/Crazy-Chat-Overlay/",
+        "icon": "/assets/img/crzychat.png",
+        "description": "A small little website/overlay that lets you have a crazy chat on stream"
+    }
+]

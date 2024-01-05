@@ -11,10 +11,12 @@ async function generateFullJson() {
     const siteDataContents = await readFile('./webpack/data/site.json', 'utf8');
     const liveDataContents = await readFile('./webpack/data/live.json', 'utf8');
     const appsDataContents = await readFile('./webpack/data/apps.json', 'utf8');
+    const toolDataContents = await readFile('./webpack/data/tools.json', 'utf8');
 
     const siteData = JSON.parse(siteDataContents);
     const liveData = JSON.parse(liveDataContents);
     const appsData = JSON.parse(appsDataContents);
+    const toolData = JSON.parse(toolDataContents);
 
     const comingSoonApp = {
         hiddenOnMenu: true,
@@ -51,6 +53,7 @@ async function generateFullJson() {
         ...siteData,
         ...liveData,
         assistantApps: [...appsData, comingSoonApp],
+        assistantAppTools: [...toolData],
         headers: [
             ...cspContent.headers.map(csp => ({ "name": csp, "value": headerString })),
             ...siteData.headers,
