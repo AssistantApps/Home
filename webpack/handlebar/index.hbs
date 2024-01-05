@@ -127,7 +127,7 @@
         {{> components/banner }}
 
         <section id="wrapper">
-            <h2 class="mb-1">Our Assistants</h2>
+            <h1 class="mb-1">Our Assistants</h1>
 
             <div class="features">
                 {{#each assistantApps}}
@@ -137,7 +137,8 @@
         </section>
 
         <section id="wrapper">
-            <h2 class="mb-1">Our Small tools</h2>
+            <h1>Our Small tools</h1>
+            <p class="mb-2">{{toolDescription}}</p>
 
             <div class="tools">
                 {{#each assistantAppTools}}
@@ -148,21 +149,8 @@
 
         <section id="wrapper-work" class="wrapper primary-colour">
             <div class="inner">
-                <h2>{{additional}}</h2>
-                <p class="mb-2">{{additionalDescription}}</p>
-
-                <div class="features">
-                    {{#each features}}
-                    {{> components/appFeature }}
-                    {{/each}}
-                </div>
-            </div>
-        </section>
-
-        <section id="wrapper-work" class="wrapper primary-colour">
-            <div class="inner">
-                <h2>{{additional}}</h2>
-                <p class="mb-2">{{additionalDescription}}</p>
+                <h1>{{assistantWork}}</h1>
+                <p class="mb-2">{{assistantWorkDescription}}</p>
 
                 <div class="features">
                     {{#each features}}
@@ -174,7 +162,7 @@
 
         <section id="footer">
             <div class="inner noselect">
-                <h2>{{footer}}</h2>
+                <h1>{{footer}}</h1>
                 <p class="mb-2">{{footerDescription}}</p>
                 <form id="contact_form">
                     <div class="fields row">
